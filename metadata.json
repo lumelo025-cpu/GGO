@@ -1,0 +1,6 @@
+{
+  "name": "Guia da Gestante Organizada - Página de Vendas",
+  "description": "Página de vendas de alta conversão para o Guia da Gestante Organizada. Checklist completo por trimestre, controle do enxoval e bônus exclusivos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
