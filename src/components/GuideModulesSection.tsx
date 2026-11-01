@@ -20,15 +20,15 @@ export function GuideModulesSection() {
   };
 
   return (
-    <section id="conteudo" className="py-14 sm:py-20 bg-[#FAF7FD] border-b border-purple-100">
+    <section id="conteudo" className="py-10 sm:py-20 bg-[#FAF7FD] border-b border-purple-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
           <span className="text-xs font-extrabold tracking-wider text-[#7C3AED] uppercase bg-purple-100 px-3 py-1 rounded-full">
             🌸 Tudo Incluso no Guia
           </span>
-          <h2 className="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mt-3 mb-4">
+          <h2 className="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mt-3 mb-3 sm:mb-4">
             Os 5 Pilares do Guia da Gestante Organizada
           </h2>
           <p className="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
@@ -37,16 +37,16 @@ export function GuideModulesSection() {
         </div>
 
         {/* Modules List - Each with its own image */}
-        <div className="space-y-10">
+        <div className="space-y-6 sm:space-y-10">
           {GUIDE_MODULES.map((module, idx) => {
             const isReversed = idx % 2 === 1;
 
             return (
               <div
                 key={module.id}
-                className="bg-white rounded-3xl border-2 border-purple-100 p-6 sm:p-8 shadow-md hover:shadow-xl hover:border-purple-300 transition-all"
+                className="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-8 shadow-sm sm:shadow-md hover:shadow-xl hover:border-purple-300 transition-all"
               >
-                <div className="grid lg:grid-cols-12 gap-8 items-center">
+                <div className="grid lg:grid-cols-12 gap-5 sm:gap-8 items-center">
                   
                   {/* Text Column */}
                   <div className={isReversed ? 'lg:col-span-7 lg:order-2' : 'lg:col-span-7'}>
@@ -75,10 +75,10 @@ export function GuideModulesSection() {
                     </p>
 
                     {/* Bullet Highlights */}
-                    <div className="grid sm:grid-cols-2 gap-3 pt-3 border-t border-purple-100">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 pt-3 border-t border-purple-100">
                       {module.highlights.map((highlight, hIdx) => (
-                        <div key={hIdx} className="flex items-start gap-2.5">
-                          <span className="w-5 h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">
+                        <div key={hIdx} className="flex items-start gap-2 sm:gap-2.5">
+                          <span className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">
                             ✓
                           </span>
                           <span className="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">
@@ -90,13 +90,13 @@ export function GuideModulesSection() {
 
                   </div>
 
-                  {/* Image Column - Every Item has its own space! */}
+                  {/* Image Column */}
                   <div className={isReversed ? 'lg:col-span-5 lg:order-1' : 'lg:col-span-5'}>
-                    <div className="rounded-2xl overflow-hidden border-2 border-purple-100 bg-purple-50 relative group shadow-md">
+                    <div className="rounded-xl sm:rounded-2xl overflow-hidden border-2 border-purple-100 bg-purple-50 relative group shadow-sm sm:shadow-md">
                       <img
                         src={module.image}
                         alt={module.title}
-                        className="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-44 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                         referrerPolicy="no-referrer"
                         onError={(e) => {
                           if (module.fallbackImage && e.currentTarget.src !== module.fallbackImage) {

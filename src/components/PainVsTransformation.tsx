@@ -40,15 +40,15 @@ export function PainVsTransformation() {
   ];
 
   return (
-    <section className="py-14 sm:py-20 bg-white border-b border-purple-100">
+    <section className="py-10 sm:py-20 bg-white border-b border-purple-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
           <span className="text-xs font-extrabold tracking-wider text-[#7C3AED] uppercase bg-purple-100 px-3 py-1 rounded-full">
             ✨ A Diferença é Real
           </span>
-          <h2 className="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mt-3 mb-4">
+          <h2 className="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mt-3 mb-3 sm:mb-4">
             Como você quer viver a sua gestação?
           </h2>
           <p className="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
@@ -57,10 +57,10 @@ export function PainVsTransformation() {
         </div>
 
         {/* Contrast Grid */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-10 items-stretch">
           
           {/* Column 1: The Pain (Without the Guide) */}
-          <div className="bg-[#FFF5F5] rounded-3xl p-6 sm:p-8 border-2 border-rose-200 flex flex-col justify-between shadow-sm">
+          <div className="bg-[#FFF5F5] rounded-2xl sm:rounded-3xl p-5 sm:p-8 border-2 border-rose-200 flex flex-col justify-between shadow-sm">
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <span className="w-10 h-10 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-sm shrink-0">
@@ -99,7 +99,7 @@ export function PainVsTransformation() {
           </div>
 
           {/* Column 2: The Transformation (With the Guide) */}
-          <div className="bg-gradient-to-br from-[#FAF5FF] to-[#F3E8FF] rounded-3xl p-6 sm:p-8 border-2 border-purple-300 shadow-xl shadow-purple-500/10 flex flex-col justify-between relative overflow-hidden">
+          <div className="bg-gradient-to-br from-[#FAF5FF] to-[#F3E8FF] rounded-2xl sm:rounded-3xl p-5 sm:p-8 border-2 border-purple-300 shadow-xl shadow-purple-500/10 flex flex-col justify-between relative overflow-hidden">
             <div className="absolute top-0 right-0 w-36 h-36 bg-pink-300/30 rounded-full blur-2xl pointer-events-none" />
             
             <div className="relative z-10">

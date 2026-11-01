@@ -22,7 +22,7 @@ export function MobileStickyCTA() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur-md border-t border-purple-200 p-2.5 shadow-[0_-4px_16px_rgba(124,58,237,0.12)]">
+    <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur-md border-t border-purple-200 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-4px_16px_rgba(124,58,237,0.12)]">
       <div className="flex items-center justify-between gap-3 max-w-md mx-auto">
         <div className="flex flex-col">
           <div className="flex items-center gap-1">
@@ -41,7 +41,7 @@ export function MobileStickyCTA() {
           href={KIWIFY_CHECKOUT_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 max-w-[200px] flex items-center justify-center gap-1.5 py-2.5 px-3 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 active:scale-95 text-white text-xs font-extrabold rounded-xl shadow-md transition-all text-center whitespace-nowrap"
+          className="flex-1 max-w-[210px] flex items-center justify-center gap-1.5 py-3 px-3 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 active:scale-95 text-white text-xs font-black rounded-xl shadow-md transition-all text-center whitespace-nowrap"
         >
           <span>QUERO O GUIA</span>
           <ArrowRight className="w-3.5 h-3.5" />

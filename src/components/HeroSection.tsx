@@ -28,12 +28,12 @@ export function HeroSection() {
             </div>
 
             {/* Main Headline with rounded playful typography */}
-            <h1 className="font-rounded-heading text-3xl sm:text-4xl lg:text-[45px] font-extrabold text-[#2E1065] leading-[1.18] tracking-tight mb-5 text-balance">
+            <h1 className="font-rounded-heading text-2xl sm:text-4xl lg:text-[45px] font-extrabold text-[#2E1065] leading-[1.2] sm:leading-[1.18] tracking-tight mb-4 sm:mb-5 text-balance">
               Chega de ansiedade, listas infinitas e compras por impulso na gravidez.
             </h1>
 
             {/* Subtitle with high emotional resonance */}
-            <p className="text-base sm:text-lg text-[#581C87]/80 leading-relaxed mb-6 max-w-xl font-medium">
+            <p className="text-sm sm:text-lg text-[#581C87]/80 leading-relaxed mb-6 max-w-xl font-medium">
               O passo a passo prático, leve e acolhedor para você curtir cada semana com serenidade, montar o enxoval perfeito sem gastar uma fortuna e ter tudo 100% pronto no seu celular.
             </p>
 
@@ -116,24 +116,23 @@ export function HeroSection() {
 
           </div>
 
-          {/* Right Column: Hero Image with Floating Glass Proof Cards */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-3xl overflow-hidden border-2 border-purple-200 shadow-2xl bg-white group">
+          {/* Right Column: Hero Image */}
+          <div className="lg:col-span-5 relative mt-4 lg:mt-0">
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-purple-200 shadow-xl sm:shadow-2xl bg-white group">
               <img
                 src="https://adquiraonline.com/wp-content/uploads/2026/11/Planejando-a-Chegada-do-Bebe.png"
                 alt="Gestante tranquila acompanhando a gravidez pelo celular com organização"
-                className="w-full h-auto object-cover aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto"
+                className="w-full h-auto object-contain block mx-auto"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
                   e.currentTarget.src = "/src/assets/images/hero_pregnant_mother_1793325871925.jpg";
                 }}
               />
-
             </div>
 
             {/* Side Floating Badge */}
-            <div className="hidden sm:flex absolute -top-4 -right-3 bg-white px-4 py-2 rounded-2xl shadow-xl border-2 border-purple-200 items-center gap-2 text-xs font-extrabold text-[#4C1D95]">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+            <div className="flex absolute -top-3 right-3 sm:-top-4 sm:-right-3 bg-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border-2 border-purple-200 items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-extrabold text-[#4C1D95]">
+              <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-500 animate-pulse" />
               <span>💜 Atualizado 2026</span>
             </div>
           </div>

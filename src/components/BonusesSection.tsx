@@ -16,16 +16,16 @@ export function BonusesSection() {
   };
 
   return (
-    <section id="bonus" className="py-14 sm:py-20 bg-white border-b border-purple-100">
+    <section id="bonus" className="py-10 sm:py-20 bg-white border-b border-purple-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-purple-100 to-pink-100 text-[#7C3AED] text-xs font-extrabold rounded-full mb-3 border border-purple-200">
-            <Gift className="w-4 h-4 text-[#EC4899]" />
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-gradient-to-r from-purple-100 to-pink-100 text-[#7C3AED] text-xs font-extrabold rounded-full mb-3 border border-purple-200">
+            <Gift className="w-3.5 h-3.5 text-[#EC4899]" />
             <span>3 PRESENTES ESPECIAIS INCLUSOS HOJE</span>
           </div>
-          <h2 className="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mb-4">
+          <h2 className="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mb-3 sm:mb-4">
             Bônus Exclusivos que acompanham o Guia
           </h2>
           <p className="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
@@ -34,19 +34,19 @@ export function BonusesSection() {
         </div>
 
         {/* Bonuses Cards Grid - Each with its own image! */}
-        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 items-stretch">
           {BONUS_ITEMS.map((bonus) => (
             <div
               key={bonus.id}
-              className="bg-[#FAF7FD] rounded-3xl border-2 border-purple-200 p-5 sm:p-6 flex flex-col justify-between hover:border-purple-400 hover:shadow-xl transition-all relative overflow-hidden group shadow-md"
+              className="bg-[#FAF7FD] rounded-2xl sm:rounded-3xl border-2 border-purple-200 p-4 sm:p-6 flex flex-col justify-between hover:border-purple-400 hover:shadow-xl transition-all relative overflow-hidden group shadow-sm sm:shadow-md"
             >
               <div>
                 {/* Image Space for Each Bonus */}
-                <div className="rounded-2xl overflow-hidden border border-purple-200 mb-5 relative group-hover:scale-[1.02] transition-transform duration-300 shadow-sm bg-purple-100">
+                <div className="rounded-xl sm:rounded-2xl overflow-hidden border border-purple-200 mb-4 sm:mb-5 relative group-hover:scale-[1.02] transition-transform duration-300 shadow-sm bg-purple-100">
                   <img
                     src={bonus.image}
                     alt={bonus.title}
-                    className="w-full h-48 sm:h-52 object-cover"
+                    className="w-full h-44 sm:h-52 object-cover"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       if (bonus.fallbackImage && e.currentTarget.src !== bonus.fallbackImage) {
@@ -111,9 +111,9 @@ export function BonusesSection() {
         </div>
 
         {/* Bonus Callout Banner */}
-        <div className="mt-12 bg-gradient-to-r from-purple-100 via-pink-100 to-purple-100 rounded-3xl p-6 sm:p-8 border-2 border-purple-200 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left shadow-md">
+        <div className="mt-8 sm:mt-12 bg-gradient-to-r from-purple-100 via-pink-100 to-purple-100 rounded-2xl sm:rounded-3xl p-5 sm:p-8 border-2 border-purple-200 flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 text-center sm:text-left shadow-sm sm:shadow-md">
           <div>
-            <h4 className="font-rounded-heading text-lg sm:text-xl font-extrabold text-[#2E1065]">
+            <h4 className="font-rounded-heading text-base sm:text-xl font-extrabold text-[#2E1065]">
               Economia Imediata: R$ 109,70 em bônus + R$ 50,00 de desconto no Guia!
             </h4>
             <p className="text-xs sm:text-sm text-[#581C87] font-semibold mt-1">
@@ -124,7 +124,7 @@ export function BonusesSection() {
             href={KIWIFY_CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white text-xs sm:text-sm font-extrabold rounded-2xl shadow-lg shadow-purple-500/25 transition-all whitespace-nowrap active:scale-95"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white text-xs sm:text-sm font-extrabold rounded-xl sm:rounded-2xl shadow-lg shadow-purple-500/25 transition-all whitespace-nowrap active:scale-95"
           >
             <span>QUERO TODOS OS BÔNUS</span>
             <ArrowRight className="w-4 h-4" />

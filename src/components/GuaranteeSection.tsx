@@ -2,18 +2,18 @@ import { ShieldCheck, HeartHandshake } from "lucide-react";
 
 export function GuaranteeSection() {
   return (
-    <section className="py-14 sm:py-20 bg-white border-b border-purple-100">
+    <section className="py-10 sm:py-20 bg-white border-b border-purple-100">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="bg-gradient-to-r from-purple-50 via-pink-50 to-purple-50 rounded-3xl border-2 border-purple-200 p-6 sm:p-10 flex flex-col md:flex-row items-center gap-8 shadow-md">
+        <div className="bg-gradient-to-r from-purple-50 via-pink-50 to-purple-50 rounded-2xl sm:rounded-3xl border-2 border-purple-200 p-5 sm:p-10 flex flex-col md:flex-row items-center gap-6 sm:gap-8 shadow-sm sm:shadow-md">
           
           {/* Guarantee Badge */}
           <div className="relative shrink-0">
-            <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-white border-3 border-dashed border-[#7C3AED] flex flex-col items-center justify-center text-center p-3 shadow-lg">
-              <ShieldCheck className="w-8 h-8 text-[#7C3AED] mb-1" />
-              <span className="font-rounded-heading text-xl sm:text-2xl font-extrabold text-[#2E1065] leading-none">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl sm:rounded-3xl bg-white border-2 sm:border-3 border-dashed border-[#7C3AED] flex flex-col items-center justify-center text-center p-2 sm:p-3 shadow-md sm:shadow-lg">
+              <ShieldCheck className="w-7 h-7 sm:w-8 sm:h-8 text-[#7C3AED] mb-1" />
+              <span className="font-rounded-heading text-lg sm:text-2xl font-extrabold text-[#2E1065] leading-none">
                 7 DIAS
               </span>
-              <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#7C3AED] mt-1">
+              <span className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider text-[#7C3AED] mt-1">
                 Garantia Total
               </span>
             </div>

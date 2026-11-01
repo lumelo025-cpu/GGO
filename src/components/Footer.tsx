@@ -3,7 +3,7 @@ import { KIWIFY_CHECKOUT_URL } from "../data/guideData";
 
 export function Footer() {
   return (
-    <footer className="bg-[#1E0A38] text-[#E9D5FF] pt-12 pb-20 md:pb-12 border-t border-purple-900/50">
+    <footer className="bg-[#1E0A38] text-[#E9D5FF] pt-10 sm:pt-12 pb-24 md:pb-12 border-t border-purple-900/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         <div className="grid md:grid-cols-12 gap-8 pb-10 border-b border-purple-900/50">

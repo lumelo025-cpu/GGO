@@ -39,31 +39,31 @@ export function InteractiveChecklistPreview() {
         </div>
 
         {/* Interactive App Container Mockup */}
-        <div className="bg-[#FAF7FD] rounded-3xl border-2 border-purple-200 shadow-xl p-5 sm:p-8 relative overflow-hidden">
+        <div className="bg-[#FAF7FD] rounded-2xl sm:rounded-3xl border-2 border-purple-200 shadow-lg sm:shadow-xl p-4 sm:p-8 relative overflow-hidden">
           
           {/* Header Bar of the Interactive Widget */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-purple-100">
-            <div className="flex items-center gap-3">
-              <span className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#7C3AED] to-[#EC4899] text-white flex items-center justify-center text-sm font-bold shadow-sm">
-                <Smartphone className="w-5 h-5" />
+          <div className="flex flex-wrap items-center justify-between gap-3 sm:gap-4 pb-4 border-b border-purple-100">
+            <div className="flex items-center gap-2.5 sm:gap-3">
+              <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-[#7C3AED] to-[#EC4899] text-white flex items-center justify-center text-sm font-bold shadow-sm shrink-0">
+                <Smartphone className="w-4 h-4 sm:w-5 sm:h-5" />
               </span>
               <div>
                 <h4 className="text-sm sm:text-base font-extrabold text-[#2E1065]">
                   Meu Cronograma Gestacional
                 </h4>
-                <p className="text-xs text-[#6D28D9]/70 font-medium">
+                <p className="text-[11px] sm:text-xs text-[#6D28D9]/70 font-medium">
                   Toque nos itens para marcar como concluído
                 </p>
               </div>
             </div>
 
             {/* Trimester Tabs */}
-            <div className="flex items-center gap-1.5 p-1 bg-purple-100/70 rounded-2xl text-xs font-bold">
+            <div className="flex items-center gap-1 p-1 bg-purple-100/70 rounded-xl text-xs font-bold">
               {checklistState.map((tri, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveTab(idx)}
-                  className={`px-3.5 py-1.5 rounded-xl transition-all ${
+                  className={`px-3 py-1.5 sm:px-3.5 rounded-lg sm:rounded-xl transition-all ${
                     activeTab === idx
                       ? "bg-white text-[#7C3AED] shadow-sm font-extrabold"
                       : "text-[#6D28D9]/70 hover:text-[#4C1D95]"
@@ -143,8 +143,8 @@ export function InteractiveChecklistPreview() {
 
           {/* Prompt to buy */}
           <div className="mt-6 pt-5 border-t border-purple-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-xs text-[#581C87] font-semibold">
-              <Sparkles className="w-4 h-4 text-amber-500" />
+            <div className="flex items-center gap-2 text-xs text-[#581C87] font-semibold text-center sm:text-left">
+              <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
               <span>O guia completo possui mais de <strong>120 itens organizados</strong> por fases e categorias.</span>
             </div>
 
@@ -152,7 +152,7 @@ export function InteractiveChecklistPreview() {
               href={KIWIFY_CHECKOUT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white text-xs font-bold rounded-xl shadow-md transition-all whitespace-nowrap"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-3 sm:py-2.5 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all whitespace-nowrap"
             >
               <span>Quero a Lista Completa</span>
               <ArrowRight className="w-3.5 h-3.5" />

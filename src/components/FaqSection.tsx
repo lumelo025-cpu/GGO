@@ -10,11 +10,11 @@ export function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-14 sm:py-20 bg-[#FAF7FD] border-b border-purple-100">
+    <section id="faq" className="py-10 sm:py-20 bg-[#FAF7FD] border-b border-purple-100">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center max-w-xl mx-auto mb-12">
+        <div className="text-center max-w-xl mx-auto mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-purple-100 text-[#7C3AED] text-xs font-extrabold rounded-full mb-3">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>Perguntas Frequentes</span>
@@ -28,34 +28,34 @@ export function FaqSection() {
         </div>
 
         {/* Accordion List */}
-        <div className="space-y-3">
+        <div className="space-y-2.5 sm:space-y-3">
           {FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx;
 
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border-2 border-purple-100 overflow-hidden transition-all shadow-sm"
+                className="bg-white rounded-xl sm:rounded-2xl border-2 border-purple-100 overflow-hidden transition-all shadow-sm"
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 hover:bg-purple-50/50 transition-colors"
+                  className="w-full text-left p-3.5 sm:p-5 flex items-center justify-between gap-3 sm:gap-4 hover:bg-purple-50/50 transition-colors"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-sm sm:text-base font-extrabold text-[#2E1065]">
+                  <span className="text-xs sm:text-base font-extrabold text-[#2E1065] leading-snug">
                     {faq.question}
                   </span>
                   <div
-                    className={`w-7 h-7 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 transition-transform duration-200 ${
+                    className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 transition-transform duration-200 ${
                       isOpen ? "rotate-180 bg-[#7C3AED] text-white" : ""
                     }`}
                   >
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-[#581C87]/80 leading-relaxed border-t border-purple-100 font-medium">
+                  <div className="px-3.5 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-[#581C87]/80 leading-relaxed border-t border-purple-100 font-medium">
                     {faq.answer}
                   </div>
                 )}
@@ -65,7 +65,7 @@ export function FaqSection() {
         </div>
 
         {/* Bottom CTA within FAQ */}
-        <div className="mt-10 text-center">
+        <div className="mt-8 sm:mt-10 text-center">
           <p className="text-xs text-[#7C3AED] font-bold mb-3">
             Pronta para ter a gravidez mais tranquila e organizada da sua vida?
           </p>
@@ -73,7 +73,7 @@ export function FaqSection() {
             href={KIWIFY_CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-extrabold text-white bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 rounded-2xl shadow-md transition-all active:scale-95"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs sm:text-sm font-extrabold text-white bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 rounded-xl sm:rounded-2xl shadow-md transition-all active:scale-95"
           >
             <span>QUERO COMEÇAR POR APENAS R$ 47</span>
             <ArrowRight className="w-4 h-4" />

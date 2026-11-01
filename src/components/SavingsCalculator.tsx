@@ -42,22 +42,22 @@ export function SavingsCalculator() {
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl border-2 border-purple-100 p-6 sm:p-8 shadow-lg">
+        <div className="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-8 shadow-md sm:shadow-lg">
           
-          <div className="grid sm:grid-cols-2 gap-3 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mb-6 sm:mb-8">
             {commonWasteItems.map((item) => {
               const isChecked = selectedIds.includes(item.id);
               return (
                 <button
                   key={item.id}
                   onClick={() => toggleItem(item.id)}
-                  className={`p-3.5 sm:p-4 rounded-2xl border-2 text-left transition-all flex items-center justify-between gap-3 ${
+                  className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 text-left transition-all flex items-center justify-between gap-2.5 sm:gap-3 ${
                     isChecked
                       ? "bg-purple-50/70 border-purple-300 text-[#2E1065] shadow-sm"
                       : "bg-[#FAFAFA] border-slate-200 text-slate-400 opacity-60"
                   }`}
                 >
-                  <div className="flex items-center gap-2.5">
+                  <div className="flex items-center gap-2 sm:gap-2.5 min-w-0 flex-1">
                     <div
                       className={`w-5 h-5 rounded-lg flex items-center justify-center shrink-0 text-xs font-bold ${
                         isChecked ? "bg-[#7C3AED] text-white" : "border-2 border-slate-300"
@@ -65,7 +65,7 @@ export function SavingsCalculator() {
                     >
                       {isChecked && <Check className="w-3.5 h-3.5 stroke-[3]" />}
                     </div>
-                    <span className="text-xs sm:text-sm font-semibold leading-snug">
+                    <span className="text-xs sm:text-sm font-semibold leading-snug break-words">
                       {item.name}
                     </span>
                   </div>
@@ -78,22 +78,22 @@ export function SavingsCalculator() {
           </div>
 
           {/* Result Highlight Box */}
-          <div className="bg-gradient-to-r from-purple-100 via-pink-50 to-purple-100 rounded-2xl p-5 sm:p-6 border-2 border-purple-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3.5">
-              <div className="w-13 h-13 rounded-2xl bg-gradient-to-tr from-[#7C3AED] to-[#EC4899] text-white flex items-center justify-center shrink-0 shadow-md">
-                <PiggyBank className="w-7 h-7" />
+          <div className="bg-gradient-to-r from-purple-100 via-pink-50 to-purple-100 rounded-2xl p-4 sm:p-6 border-2 border-purple-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3 sm:gap-3.5 w-full sm:w-auto">
+              <div className="w-12 h-12 sm:w-13 sm:h-13 rounded-2xl bg-gradient-to-tr from-[#7C3AED] to-[#EC4899] text-white flex items-center justify-center shrink-0 shadow-md">
+                <PiggyBank className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               <div>
-                <span className="text-xs font-extrabold text-[#7C3AED] uppercase tracking-wider">
+                <span className="text-[11px] sm:text-xs font-extrabold text-[#7C3AED] uppercase tracking-wider block">
                   Total Economizado no Enxoval:
                 </span>
-                <div className="font-rounded-heading text-3xl sm:text-4xl font-extrabold text-[#4C1D95] tabular-nums">
+                <div className="font-rounded-heading text-2xl sm:text-4xl font-extrabold text-[#4C1D95] tabular-nums">
                   R$ {totalSaved.toLocaleString("pt-BR")},00
                 </div>
               </div>
             </div>
 
-            <div className="text-center sm:text-right">
+            <div className="text-center sm:text-right w-full sm:w-auto">
               <p className="text-xs font-bold text-[#6D28D9] mb-2">
                 O Guia custa só <strong>R$ 47,00</strong> e se paga na hora!
               </p>
@@ -101,7 +101,7 @@ export function SavingsCalculator() {
                 href={KIWIFY_CHECKOUT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-3 sm:py-2.5 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all"
               >
                 <span>Garantir Minha Economia</span>
                 <ArrowRight className="w-4 h-4" />
