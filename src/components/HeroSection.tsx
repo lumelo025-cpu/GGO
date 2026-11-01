@@ -1,5 +1,4 @@
-import { ArrowRight, CheckCircle2, ShieldCheck, Smartphone, Star, Zap } from "lucide-react";
-import { KIWIFY_CHECKOUT_URL } from "../data/guideData";
+import { CheckCircle2, ShieldCheck, Smartphone, Star, Zap } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -60,54 +59,22 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Price Box & CTA */}
-            <div className="bg-white rounded-3xl p-5 sm:p-7 border-2 border-purple-200 shadow-xl shadow-purple-500/5 mb-4 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-pink-200/40 via-purple-100/30 to-transparent rounded-bl-full pointer-events-none" />
-
-              <div className="flex flex-wrap items-baseline gap-2 mb-1.5">
-                <span className="text-xs uppercase tracking-wider font-bold text-slate-400 line-through">
-                  De R$ 97,00
-                </span>
-                <span className="text-xs font-extrabold px-2.5 py-0.5 bg-gradient-to-r from-purple-100 to-pink-100 text-[#7C3AED] rounded-full border border-purple-200">
-                  🎉 Economize R$ 50,00 hoje
-                </span>
-              </div>
-
-              <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-xs font-bold text-[#6D28D9]">POR APENAS:</span>
-                <span className="font-rounded-heading text-4xl sm:text-5xl font-extrabold text-[#7C3AED] tracking-tight">
-                  R$ 47,00
-                </span>
-                <span className="text-xs font-medium text-slate-500">à vista ou até</span>
-                <span className="text-sm font-extrabold text-[#5B21B6] bg-purple-100 px-2.5 py-0.5 rounded-lg">
-                  11x de R$ 5,22
-                </span>
-              </div>
-
-              <a
-                href={KIWIFY_CHECKOUT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 text-base sm:text-lg font-extrabold text-white bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#EC4899] hover:opacity-95 active:scale-[0.99] rounded-2xl shadow-lg shadow-purple-500/25 transition-all text-center leading-snug animate-pulse-subtle group"
-              >
-                <span>COMEÇAR A USAR AGORA NO MEU CELULAR</span>
-                <ArrowRight className="w-5 h-5 shrink-0 group-hover:translate-x-1 transition-transform" />
-              </a>
-
-              <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-[#6D28D9]/80 mt-3.5 font-semibold">
-                <span className="flex items-center gap-1">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                  Pagamento Seguro Kiwify
-                </span>
-                <span className="text-purple-300">·</span>
-                <span className="flex items-center gap-1">
-                  <Zap className="w-4 h-4 text-amber-500" />
-                  Acesso Imediato
-                </span>
-                <span className="text-purple-300">·</span>
-                <span className="flex items-center gap-1">
+            {/* Feature Highlights Card */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-5 sm:p-6 border-2 border-purple-100 shadow-sm mb-6">
+              <div className="flex flex-wrap items-center justify-between gap-3 text-xs font-bold text-[#6D28D9]">
+                <span className="flex items-center gap-1.5">
                   <Smartphone className="w-4 h-4 text-[#7C3AED]" />
-                  Sem mensalidades
+                  Direto no Celular
+                </span>
+                <span className="text-purple-200">·</span>
+                <span className="flex items-center gap-1.5">
+                  <Zap className="w-4 h-4 text-amber-500" />
+                  Sem Exageros
+                </span>
+                <span className="text-purple-200">·</span>
+                <span className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                  Acesso Vitalício
                 </span>
               </div>
             </div>
@@ -153,25 +120,15 @@ export function HeroSection() {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-3xl overflow-hidden border-2 border-purple-200 shadow-2xl bg-white group">
               <img
-                src="/src/assets/images/hero_pregnant_mother_1793325871925.jpg"
+                src="https://adquiraonline.com/wp-content/uploads/2026/11/Planejando-a-Chegada-do-Bebe.png"
                 alt="Gestante tranquila acompanhando a gravidez pelo celular com organização"
                 className="w-full h-auto object-cover aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto"
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  e.currentTarget.src = "/src/assets/images/hero_pregnant_mother_1793325871925.jpg";
+                }}
               />
 
-              {/* Gradient scrim for depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-950/60 via-transparent to-transparent pointer-events-none" />
-
-              {/* Bottom Caption Pill */}
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-purple-100 text-[#2E1065] text-xs sm:text-sm shadow-lg">
-                <div className="flex items-center justify-between font-extrabold text-[#7C3AED] mb-1">
-                  <span>Guia da Gestante Organizada</span>
-                  <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full text-[11px]">Acesso Vitalício</span>
-                </div>
-                <p className="text-[#581C87]/80 text-xs leading-relaxed">
-                  Tranquilidade para sonhar, planejar e curtir cada momento do seu bebê sem sobrecarga.
-                </p>
-              </div>
             </div>
 
             {/* Side Floating Badge */}

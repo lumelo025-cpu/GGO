@@ -7,6 +7,7 @@ import { CountdownBanner } from "./components/CountdownBanner";
 import { Header } from "./components/Header";
 import { HeroSection } from "./components/HeroSection";
 import { PainVsTransformation } from "./components/PainVsTransformation";
+import { PlanningIntroBanner } from "./components/PlanningIntroBanner";
 import { GuideModulesSection } from "./components/GuideModulesSection";
 import { InteractiveChecklistPreview } from "./components/InteractiveChecklistPreview";
 import { SavingsCalculator } from "./components/SavingsCalculator";
@@ -41,6 +42,9 @@ export default function App() {
 
         {/* Dores Específicas vs Transformação */}
         <PainVsTransformation />
+
+        {/* Imagem de Dúvidas e Planejamento da Gravidez */}
+        <PlanningIntroBanner />
 
         {/* Conteúdo Detalhado dos 5 Módulos */}
         <GuideModulesSection />

@@ -1,5 +1,4 @@
-import { Heart, Sparkles } from "lucide-react";
-import { KIWIFY_CHECKOUT_URL } from "../data/guideData";
+import { Heart } from "lucide-react";
 
 interface HeaderProps {
   onScrollToOffer?: () => void;
@@ -22,37 +21,24 @@ export function Header({ onScrollToOffer }: HeaderProps) {
           </span>
         </a>
 
-        {/* Zone 2: 4 nav links (single-line, concise) */}
-        <nav className="hidden md:flex items-center gap-7 text-sm font-semibold text-[#6D28D9]/80">
+        {/* Zone 2: Navigation Links */}
+        <nav className="flex items-center gap-5 sm:gap-7 text-xs sm:text-sm font-bold text-[#6D28D9]/80">
           <a href="#conteudo" className="hover:text-[#7C3AED] hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0">
             O Que Inclui
           </a>
-          <a href="#demonstracao" className="hover:text-[#7C3AED] hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0">
+          <a href="#demonstracao" className="hidden sm:inline hover:text-[#7C3AED] hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0">
             Demonstração
           </a>
           <a href="#bonus" className="hover:text-[#7C3AED] hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0">
             3 Bônus Grátis
           </a>
-          <a href="#depoimentos" className="hover:text-[#7C3AED] hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0">
+          <a href="#depoimentos" className="hidden md:inline hover:text-[#7C3AED] hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0">
             Depoimentos
           </a>
           <a href="#faq" className="hover:text-[#7C3AED] hover:underline underline-offset-4 transition-colors whitespace-nowrap shrink-0">
             Dúvidas
           </a>
         </nav>
-
-        {/* Zone 3: 1 primary action */}
-        <div className="flex items-center gap-3 shrink-0">
-          <a
-            href={KIWIFY_CHECKOUT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-4 py-2 text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#EC4899] hover:opacity-95 active:scale-95 rounded-xl shadow-md hover:shadow-lg transition-all whitespace-nowrap shrink-0"
-          >
-            <Sparkles className="w-3.5 h-3.5 mr-1.5" />
-            Garantir por R$ 47
-          </a>
-        </div>
       </div>
     </header>
   );

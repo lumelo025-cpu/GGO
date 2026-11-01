@@ -52,7 +52,7 @@ export function CountdownBanner() {
           </span>
           <span className="text-purple-300">·</span>
           <span className="text-[#A7F3D0] font-bold">
-            R$ 50,00 de Desconto Liberado
+            Acesso Vitalício + 3 Bônus Inclusos
           </span>
         </div>
 
