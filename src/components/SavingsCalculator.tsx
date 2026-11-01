@@ -35,10 +35,10 @@ export function SavingsCalculator() {
             💰 Economia Real no Bolso
           </span>
           <h2 className="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mt-3 mb-3">
-            Quanto o marketing faz você gastar sem necessidade?
+            Seu bebê precisa mesmo de tudo isso?
           </h2>
           <p className="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
-            Selecione abaixo os itens supérfluos que costumam empurrar para as gestantes e veja o quanto o <strong>Guia da Gestante Organizada</strong> vai poupar no seu orçamento:
+            Veja quanto você pode economizar evitando compras por impulso no enxoval.
           </p>
         </div>
 

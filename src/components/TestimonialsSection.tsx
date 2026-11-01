@@ -16,7 +16,7 @@ export function TestimonialsSection() {
             Veja o que dizem as futuras mães que usam o Guia
           </h2>
           <p className="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
-            Mais de 2.480 gestantes já transformaram a ansiedade do enxoval em paz e segurança diária.
+            Mais de 4.000 gestantes já transformaram a ansiedade do enxoval em paz e segurança diária.
           </p>
         </div>
 
@@ -78,9 +78,9 @@ export function TestimonialsSection() {
         <div className="mt-12 p-6 bg-white rounded-3xl border-2 border-purple-100 shadow-md flex flex-wrap items-center justify-around gap-6 text-center text-xs text-[#581C87]">
           <div>
             <div className="font-rounded-heading text-2xl sm:text-3xl font-extrabold text-[#7C3AED]">
-              +2.480
+              +4.000
             </div>
-            <span className="text-purple-900/70 font-semibold">Mães e Gestantes Atendidas</span>
+            <span className="text-purple-900/70 font-semibold">Gestantes Atendidas</span>
           </div>
           <div className="hidden sm:block h-8 w-[1px] bg-purple-200" />
           <div>

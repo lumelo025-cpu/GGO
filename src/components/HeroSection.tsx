@@ -143,7 +143,7 @@ export function HeroSection() {
                   </div>
                   <span>4.9/5</span>
                 </div>
-                <span>Mais de <strong>2.400 futuras mães</strong> organizadas</span>
+                <span>Mais de <strong>4.000 gestantes</strong> organizadas</span>
               </div>
             </div>
 

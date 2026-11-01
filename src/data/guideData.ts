@@ -6,6 +6,7 @@ export interface GuideModule {
   description: string;
   highlights: string[];
   image: string;
+  fallbackImage?: string;
   tag: string;
   accentColor: string;
   bgColor: string;
@@ -21,6 +22,7 @@ export interface BonusItem {
   description: string;
   benefits: string[];
   image: string;
+  fallbackImage?: string;
   accentColor: string;
 }
 
@@ -57,7 +59,8 @@ export const GUIDE_MODULES: GuideModule[] = [
       "Basta dar check nas tarefas realizadas",
       "Sem sobrecarga mental: saiba exatamente o foco de cada fase"
     ],
-    image: "/src/assets/images/mockup_digital_guide_1793325873212.jpg",
+    image: "https://adquiraonline.com/wp-content/uploads/2026/10/Planejador-de-Gravidez-em-Ambiente-Aconchegante.png",
+    fallbackImage: "/src/assets/images/mockup_digital_guide_1793325873212.jpg",
     accentColor: "from-purple-500 to-indigo-600",
     bgColor: "bg-purple-50/70"
   },
@@ -75,6 +78,7 @@ export const GUIDE_MODULES: GuideModule[] = [
       "Tabela indicativa para economizar sem abrir mão do conforto"
     ],
     image: "https://adquiraonline.com/wp-content/uploads/2026/10/Preparativos-do-bebe-com-checklist-no-tablet.png",
+    fallbackImage: "/src/assets/images/baby_closet_organized_1793325873403.jpg",
     accentColor: "from-pink-500 to-purple-600",
     bgColor: "bg-pink-50/70"
   },
@@ -91,7 +95,8 @@ export const GUIDE_MODULES: GuideModule[] = [
       "Notas com dicas para fazer escolhas conscientes",
       "Filtro antimarketing: o que realmente funciona no dia a dia com um recém-nascido"
     ],
-    image: "/src/assets/images/guide_baby_accessories_1793326790654.jpg",
+    image: "https://adquiraonline.com/wp-content/uploads/2026/10/Aplicativo-de-Gestante-no-Cantinho-do-Bebe.png",
+    fallbackImage: "/src/assets/images/guide_baby_accessories_1793326790654.jpg",
     accentColor: "from-violet-500 to-fuchsia-600",
     bgColor: "bg-violet-50/70"
   },
@@ -108,7 +113,8 @@ export const GUIDE_MODULES: GuideModule[] = [
       "Lista prática do que ter sempre na bolsa de passeio",
       "Dicas para organizar em saquinhos identificados por dia"
     ],
-    image: "/src/assets/images/maternity_bag_prepared_1793325873396.jpg",
+    image: "https://adquiraonline.com/wp-content/uploads/2026/10/Guia-da-Gestante-Organizada-7.png",
+    fallbackImage: "/src/assets/images/maternity_bag_prepared_1793325873396.jpg",
     accentColor: "from-purple-600 to-pink-500",
     bgColor: "bg-purple-50/70"
   },
@@ -125,7 +131,8 @@ export const GUIDE_MODULES: GuideModule[] = [
       "Um cantinho só seu para sonhar, planejar e se inspirar",
       "Compartilhe facilmente com seu parceiro(a) ou decorador(a)"
     ],
-    image: "/src/assets/images/guide_nursery_inspirations_1793326790891.jpg",
+    image: "https://adquiraonline.com/wp-content/uploads/2026/10/Espaco-Pastel-da-Gestante-Organizada.png",
+    fallbackImage: "/src/assets/images/guide_nursery_inspirations_1793326790891.jpg",
     accentColor: "from-fuchsia-500 to-purple-600",
     bgColor: "bg-fuchsia-50/70"
   }
@@ -146,7 +153,8 @@ export const BONUS_ITEMS: BonusItem[] = [
       "Evite compras duplicadas ou por impulso no calor da emoção",
       "Defina orçamentos máximos por categoria para não estourar o bolso"
     ],
-    image: "/src/assets/images/bonus_financial_planner_1793326793048.jpg",
+    image: "https://adquiraonline.com/wp-content/uploads/2026/10/Planilha-do-Enxoval-em-Clima-Aconchegante.png",
+    fallbackImage: "/src/assets/images/bonus_financial_planner_1793326793048.jpg",
     accentColor: "from-purple-600 to-indigo-600"
   },
   {
@@ -163,7 +171,8 @@ export const BONUS_ITEMS: BonusItem[] = [
       "Evite excessos e monte um enxoval funcional, prático e inteligente",
       "Adaptado se seu bebê nasce no verão rigoroso ou inverno frio"
     ],
-    image: "/src/assets/images/bonus_ai_prompt_phone_1793326792640.jpg",
+    image: "https://adquiraonline.com/wp-content/uploads/2026/10/Tablet-com-Chat-de-Enxoval-em-Ambiente-Aconchegante.png",
+    fallbackImage: "/src/assets/images/bonus_ai_prompt_phone_1793326792640.jpg",
     accentColor: "from-pink-500 to-purple-600"
   },
   {
@@ -180,7 +189,8 @@ export const BONUS_ITEMS: BonusItem[] = [
       "Itens úteis, testados e recomendados por outras mães reais",
       "Melhor custo-benefício garantido para economizar de verdade"
     ],
-    image: "/src/assets/images/bonus_shopping_links_1793326793133.jpg",
+    image: "https://adquiraonline.com/wp-content/uploads/2026/10/Guia-de-enxoval-na-palma-da-mao.png",
+    fallbackImage: "/src/assets/images/bonus_shopping_links_1793326793133.jpg",
     accentColor: "from-violet-600 to-pink-500"
   }
 ];

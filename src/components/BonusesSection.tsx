@@ -48,6 +48,11 @@ export function BonusesSection() {
                     alt={bonus.title}
                     className="w-full h-48 sm:h-52 object-cover"
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      if (bonus.fallbackImage && e.currentTarget.src !== bonus.fallbackImage) {
+                        e.currentTarget.src = bonus.fallbackImage;
+                      }
+                    }}
                   />
                   <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-[#7C3AED] text-xs font-extrabold px-3 py-1 rounded-full shadow-sm">
                     {bonus.number}

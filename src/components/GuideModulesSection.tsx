@@ -99,7 +99,9 @@ export function GuideModulesSection() {
                         className="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                         referrerPolicy="no-referrer"
                         onError={(e) => {
-                          e.currentTarget.src = "/src/assets/images/baby_closet_organized_1793325873403.jpg";
+                          if (module.fallbackImage && e.currentTarget.src !== module.fallbackImage) {
+                            e.currentTarget.src = module.fallbackImage;
+                          }
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-950/40 via-transparent to-transparent pointer-events-none" />
