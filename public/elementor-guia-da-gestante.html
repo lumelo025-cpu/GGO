@@ -1,0 +1,1609 @@
+<!-- =======================================================================
+     GUIA DA GESTANTE ORGANIZADA - VERSÃO COMPLETA PARA WORDPRESS / ELEMENTOR
+     Compatível 100% com o widget HTML do Elementor (Copie e cole diretamente).
+     ======================================================================= -->
+
+<div id="ggo-landing-page">
+  <!-- Fontes Oficiais: Nunito e Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Quicksand:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Engine (Preflight desativado para NÃO alterar nada no tema WordPress) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: {
+        preflight: false
+      },
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Nunito', 'sans-serif'],
+            'rounded-heading': ['Quicksand', 'sans-serif']
+          },
+          colors: {
+            purple: {
+              50: '#FAF5FF',
+              100: '#F3E8FF',
+              200: '#E9D5FF',
+              300: '#D8B4FE',
+              400: '#C084FC',
+              500: '#A855F7',
+              600: '#9333EA',
+              700: '#7E22CE',
+              800: '#6B21A8',
+              900: '#581C87',
+              950: '#3B0764'
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Isolamento de Estilos para o Elementor -->
+  <style>
+    #ggo-landing-page {
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+      color: #2E1065 !important;
+      background-color: #FAF7FD !important;
+      line-height: 1.5 !important;
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      overflow-x: hidden !important;
+    }
+
+    #ggo-landing-page *,
+    #ggo-landing-page *::before,
+    #ggo-landing-page *::after {
+      box-sizing: border-box !important;
+    }
+
+    #ggo-landing-page a {
+      text-decoration: none !important;
+    }
+
+    #ggo-landing-page button {
+      background: none;
+      border: none;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    #ggo-landing-page h1,
+    #ggo-landing-page h2,
+    #ggo-landing-page h3,
+    #ggo-landing-page h4,
+    #ggo-landing-page h5 {
+      font-family: 'Quicksand', sans-serif !important;
+      margin: 0 !important;
+    }
+
+    #ggo-landing-page p {
+      margin: 0 !important;
+    }
+
+    #ggo-landing-page ul {
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    #ggo-landing-page img {
+      max-width: 100% !important;
+      height: auto !important;
+      display: block !important;
+    }
+
+    @keyframes ggo-pulse-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
+    .ggo-animate-pulse-subtle {
+      animation: ggo-pulse-subtle 2.5s ease-in-out infinite;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+  <!-- 1. BARRA DE CONTAGEM REGRESSIVA NO TOPO -->
+  <div class="bg-gradient-to-r from-[#4C1D95] via-[#6D28D9] to-[#8B5CF6] text-white py-2 px-3 sm:px-4 text-[11px] sm:text-xs border-b border-purple-400/30 shadow-inner">
+    <div class="max-w-6xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center gap-1.5 sm:gap-2 truncate">
+        <span class="flex items-center gap-1 font-extrabold text-[#FDE047] tracking-wide shrink-0">
+          <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+          <span class="hidden sm:inline">Oferta Especial</span>
+          <span class="sm:hidden">Oferta</span>
+        </span>
+        <span class="text-purple-300">·</span>
+        <span class="text-[#A7F3D0] font-bold truncate">
+          <span class="hidden sm:inline">Acesso Vitalício + </span>3 Bônus Inclusos
+        </span>
+      </div>
+
+      <div class="flex items-center gap-1.5 shrink-0 text-[11px] sm:text-xs">
+        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FDE047] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span class="text-purple-100 font-medium hidden sm:inline">Expira em:</span>
+        <div class="flex items-center gap-0.5 sm:gap-1 font-mono font-bold tabular-nums text-white bg-black/30 px-2 py-0.5 rounded-md border border-purple-300/30">
+          <span id="ggo-cd-hours">04</span>
+          <span>:</span>
+          <span id="ggo-cd-mins">55</span>
+          <span>:</span>
+          <span id="ggo-cd-secs">56</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. CABEÇALHO / LOGO DA MARCA (CENTRALIZADO) -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-purple-100 transition-colors">
+    <div class="max-w-6xl mx-auto px-3 sm:px-6 h-14 sm:h-16 flex items-center justify-center">
+      <a href="#" class="flex items-center gap-2 font-rounded-heading text-base sm:text-xl font-bold tracking-tight text-[#4C1D95] whitespace-nowrap shrink-0 hover:text-[#7C3AED] transition-colors">
+        <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-[#8B5CF6] to-[#EC4899] flex items-center justify-center text-white shadow-sm shrink-0">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-white" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        </span>
+        <span class="bg-gradient-to-r from-[#5B21B6] via-[#7C3AED] to-[#DB2777] bg-clip-text text-transparent font-extrabold text-sm sm:text-lg">
+          Guia da Gestante
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <!-- 3. HERO SECTION -->
+  <section class="relative overflow-hidden pt-8 pb-14 sm:pt-14 sm:pb-20 border-b border-purple-100">
+    <div class="absolute inset-0 bg-gradient-to-b from-[#FAF5FF] via-[#F3E8FF]/60 to-[#FAF7FD] pointer-events-none -z-10"></div>
+    <div class="absolute top-10 left-1/4 w-72 h-72 bg-purple-300/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute top-20 right-10 w-80 h-80 bg-pink-300/25 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Coluna Esquerda: Texto e Benefícios -->
+        <div class="lg:col-span-7 flex flex-col justify-center">
+          <div class="flex flex-wrap items-center gap-2 text-xs font-bold tracking-wide text-[#7C3AED] uppercase mb-4">
+            <span class="bg-purple-100 text-[#6D28D9] px-2.5 py-1 rounded-full flex items-center gap-1">
+              💜 Para Gestantes de 1ª ou 2ª Viagem
+            </span>
+            <span aria-hidden="true" class="text-purple-300">·</span>
+            <span class="bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full">
+              ✨ 100% no Celular
+            </span>
+          </div>
+
+          <h1 class="font-rounded-heading text-2xl sm:text-4xl lg:text-[45px] font-extrabold text-[#2E1065] leading-[1.2] sm:leading-[1.18] tracking-tight mb-4 sm:mb-5">
+            Chega de ansiedade, listas infinitas e compras por impulso na gravidez.
+          </h1>
+
+          <p class="text-sm sm:text-lg text-[#581C87]/80 leading-relaxed mb-6 max-w-xl font-medium">
+            O passo a passo prático, leve e acolhedor para você curtir cada semana com serenidade, montar o enxoval perfeito sem gastar uma fortuna e ter tudo 100% pronto no seu celular.
+          </p>
+
+          <div class="space-y-2.5 mb-8">
+            <div class="flex items-start gap-2.5 text-sm sm:text-[15px] text-[#3B0764]">
+              <div class="w-5 h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4 fill-purple-100 text-[#7C3AED]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <span><strong>Cronograma por trimestre:</strong> saiba exatamente o que fazer sem esquecer nada.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-sm sm:text-[15px] text-[#3B0764]">
+              <div class="w-5 h-5 rounded-full bg-pink-100 text-[#EC4899] flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4 fill-pink-100 text-[#EC4899]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <span><strong>Enxoval sem excessos:</strong> roupas e itens essenciais com controle de compras e lavagens.</span>
+            </div>
+            <div class="flex items-start gap-2.5 text-sm sm:text-[15px] text-[#3B0764]">
+              <div class="w-5 h-5 rounded-full bg-emerald-100 text-[#059669] flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4 fill-emerald-100 text-[#059669]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <span><strong>3 Bônus Inclusos:</strong> Planilha financeira, Enxoval IA e Links diretos confiáveis.</span>
+            </div>
+          </div>
+
+          <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-5 sm:p-6 border-2 border-purple-100 shadow-sm mb-6">
+            <div class="flex flex-wrap items-center justify-between gap-3 text-xs font-bold text-[#6D28D9]">
+              <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-[#7C3AED]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                Direto no Celular
+              </span>
+              <span class="text-purple-200">·</span>
+              <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                Sem Exageros
+              </span>
+              <span class="text-purple-200">·</span>
+              <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                Acesso Vitalício
+              </span>
+            </div>
+          </div>
+
+          <!-- Prova Social -->
+          <div class="flex items-center gap-3 pt-1">
+            <div class="flex -space-x-2 overflow-hidden">
+              <img class="inline-block h-9 w-9 rounded-full ring-2 ring-purple-200 object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&h=80&q=80" alt="Gestante feliz" referrerpolicy="no-referrer">
+              <img class="inline-block h-9 w-9 rounded-full ring-2 ring-purple-200 object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=80" alt="Mãe realizada" referrerpolicy="no-referrer">
+              <img class="inline-block h-9 w-9 rounded-full ring-2 ring-purple-200 object-cover" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=80&h=80&q=80" alt="Mãe de primeira viagem" referrerpolicy="no-referrer">
+            </div>
+            <div class="text-xs text-[#581C87]">
+              <div class="flex items-center gap-1 text-amber-500 font-extrabold">
+                <div class="flex">
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <span>4.9/5</span>
+              </div>
+              <span>Mais de <strong>4.000 gestantes</strong> organizadas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Imagem Principal -->
+        <div class="lg:col-span-5 relative mt-4 lg:mt-0">
+          <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-purple-200 shadow-xl sm:shadow-2xl bg-white group">
+            <img src="https://adquiraonline.com/wp-content/uploads/2026/11/Planejando-a-Chegada-do-Bebe.png" alt="Gestante tranquila acompanhando a gravidez pelo celular com organização" class="w-full h-auto object-contain block mx-auto" referrerpolicy="no-referrer">
+          </div>
+          <div class="flex absolute -top-3 right-3 sm:-top-4 sm:-right-3 bg-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border-2 border-purple-200 items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-extrabold text-[#4C1D95]">
+            <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>💜 Atualizado 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. CONTRASTE: SEM O GUIA VS COM O GUIA -->
+  <section class="py-10 sm:py-20 bg-white border-b border-purple-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+        <span class="text-xs font-extrabold tracking-wider text-[#7C3AED] uppercase bg-purple-100 px-3 py-1 rounded-full">
+          ✨ A Diferença é Real
+        </span>
+        <h2 class="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mt-3 mb-3 sm:mb-4">
+          Como você quer viver a sua gestação?
+        </h2>
+        <p class="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
+          A gestação é um momento único na vida de uma mulher. Você não precisa passar 9 meses estressada, exausta e sobrecarregada com decisões de enxoval.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-10 items-stretch">
+        <!-- Coluna 1: A Dor (Sem o Guia) -->
+        <div class="bg-[#FFF5F5] rounded-2xl sm:rounded-3xl p-5 sm:p-8 border-2 border-rose-200 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-10 h-10 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-sm shrink-0">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+              </span>
+              <div>
+                <h3 class="font-rounded-heading text-xl font-bold text-[#881337]">
+                  Sem o Guia Organizado
+                </h3>
+                <p class="text-xs text-rose-600/80 font-medium">A rotina cansativa da maioria das grávidas</p>
+              </div>
+            </div>
+
+            <div class="space-y-5">
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-xs font-extrabold shrink-0 mt-0.5">✕</span>
+                <div>
+                  <h4 class="text-sm font-bold text-[#881337] mb-1">Sobrecarga de opiniões conflitantes</h4>
+                  <p class="text-xs sm:text-sm text-rose-950/70 leading-relaxed">Cada parente, amiga e perfil do Instagram diz uma coisa diferente. Você não sabe em quem confiar e fica paralisada sem saber o que comprar primeiro.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-xs font-extrabold shrink-0 mt-0.5">✕</span>
+                <div>
+                  <h4 class="text-sm font-bold text-[#881337] mb-1">Medo constante de esquecer algo crucial</h4>
+                  <p class="text-xs sm:text-sm text-rose-950/70 leading-relaxed">Exames de cada trimestre, vacinas da gestante, documentos do cartório, ultrassons morfológicos... O medo de deixar passar uma data importante não te deixa relaxar.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-xs font-extrabold shrink-0 mt-0.5">✕</span>
+                <div>
+                  <h4 class="text-sm font-bold text-[#881337] mb-1">Gastos astronômicos e desnecessários</h4>
+                  <p class="text-xs sm:text-sm text-rose-950/70 leading-relaxed">Comprar dezenas de macacões que o bebê perde em duas semanas, acessórios milagrosos que nunca saem da gaveta e estourar o limite do cartão sem necessidade.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-rose-200 text-rose-700 flex items-center justify-center text-xs font-extrabold shrink-0 mt-0.5">✕</span>
+                <div>
+                  <h4 class="text-sm font-bold text-[#881337] mb-1">Pânico da mala da maternidade no 8º mês</h4>
+                  <p class="text-xs sm:text-sm text-rose-950/70 leading-relaxed">Chegar perto do parto com a sensação de estar despreparada, sem saber quantas trocas levar para a mãe, bebê e acompanhante, e ter que correr no desespero.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-rose-200 text-xs text-rose-700 font-bold text-center">
+            Resultado: Ansiedade diária, estresse a dois e dinheiro jogado fora.
+          </div>
+        </div>
+
+        <!-- Coluna 2: A Transformação (Com o Guia) -->
+        <div class="bg-gradient-to-br from-[#FAF5FF] to-[#F3E8FF] rounded-2xl sm:rounded-3xl p-5 sm:p-8 border-2 border-purple-300 shadow-xl shadow-purple-500/10 flex flex-col justify-between relative overflow-hidden">
+          <div class="relative z-10">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#7C3AED] to-[#EC4899] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-sm">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-rounded-heading text-xl font-extrabold text-[#3B0764]">
+                    Com o Guia da Gestante
+                  </h3>
+                  <span class="text-[10px] font-extrabold tracking-wide uppercase px-2 py-0.5 bg-purple-200/80 text-[#5B21B6] rounded-full">
+                    💜 Transformação
+                  </span>
+                </div>
+                <p class="text-xs text-[#6D28D9] font-medium">A serenidade que você e seu bebê merecem</p>
+              </div>
+            </div>
+
+            <div class="space-y-5">
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-extrabold shrink-0 mt-0.5">✓</span>
+                <div>
+                  <h4 class="text-sm font-bold text-[#3B0764] mb-1">Um roteiro claro na palma da sua mão</h4>
+                  <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed">Checklists organizados por trimestre. Você acorda sabendo exatamente o que precisa focar em cada semana, sem listas intermináveis nem confusão.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-extrabold shrink-0 mt-0.5">✓</span>
+                <div>
+                  <h4 class="text-sm font-bold text-[#3B0764] mb-1">Paz mental e controle total</h4>
+                  <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed">Campos dedicados para anotar dúvidas para o médico, datas de exames e pendências. Basta dar check e curtir os chutes do seu bebê em paz.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-extrabold shrink-0 mt-0.5">✓</span>
+                <div>
+                  <h4 class="text-sm font-bold text-[#3B0764] mb-1">Enxoval inteligente e economia de até R$ 2.500</h4>
+                  <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed">Do RN aos 12 meses com controle do que já comprou e lavou. Você adquire apenas o que tem utilidade real e sobra dinheiro para o futuro do seu filho.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-extrabold shrink-0 mt-0.5">✓</span>
+                <div>
+                  <h4 class="text-sm font-bold text-[#3B0764] mb-1">Mala da maternidade pronta com semanas de antecedência</h4>
+                  <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed">Tudo separado em saquinhos identificados (Mamãe, Bebê, Acompanhante e Documentos). Quando o trabalho de parto começar, é só pegar a mala e ir.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-purple-200/80 text-xs text-[#6D28D9] font-extrabold text-center">
+            Resultado: 9 meses de leveza, conexão com o bebê e certeza de estar no controle.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. BANNER INTRODUTÓRIO ANTES DOS MÓDULOS -->
+  <section class="py-4 sm:py-10 bg-gradient-to-b from-white via-[#FAF7FD] to-[#FAF7FD]">
+    <div class="max-w-5xl mx-auto px-3 sm:px-6">
+      <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-purple-200 shadow-md sm:shadow-lg hover:shadow-xl transition-all bg-white">
+        <img src="https://adquiraonline.com/wp-content/uploads/2026/11/Duvidas-e-Planejamento-da-Gravidez.png" alt="Dúvidas e Planejamento da Gravidez - Guia da Gestante Organizada" class="w-full h-auto object-contain block mx-auto" loading="lazy" referrerpolicy="no-referrer">
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. MÓDULOS DO GUIA (OS 5 PILARES) -->
+  <section id="conteudo" class="py-10 sm:py-20 bg-[#FAF7FD] border-b border-purple-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+        <span class="text-xs font-extrabold tracking-wider text-[#7C3AED] uppercase bg-purple-100 px-3 py-1 rounded-full">
+          🌸 Tudo Incluso no Guia
+        </span>
+        <h2 class="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mt-3 mb-3 sm:mb-4">
+          Os 5 Pilares do Guia da Gestante Organizada
+        </h2>
+        <p class="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
+          Cada módulo foi pensado para você economizar tempo, dinheiro e energia mental durante os 9 meses mais especiais da sua vida.
+        </p>
+      </div>
+
+      <div class="space-y-6 sm:space-y-10">
+        <!-- Módulo 01 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-8 shadow-sm sm:shadow-md hover:shadow-xl hover:border-purple-300 transition-all">
+          <div class="grid lg:grid-cols-12 gap-5 sm:gap-8 items-center">
+            <div class="lg:col-span-7">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-11 h-11 rounded-2xl bg-purple-100 flex items-center justify-center shrink-0 border border-purple-200 shadow-sm">
+                  <svg class="w-5 h-5 text-[#7C3AED]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs font-extrabold text-[#7C3AED] uppercase tracking-wider">MÓDULO 01 · Organização Passo a Passo</span>
+                  <h3 class="font-rounded-heading text-xl sm:text-2xl font-extrabold text-[#2E1065]">Cronograma da Gestante</h3>
+                </div>
+              </div>
+              <p class="text-sm sm:text-base font-bold text-[#6D28D9] mb-3">Checklist organizado com tudo o que você precisa fazer em cada trimestre</p>
+              <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-6 font-medium">Chega de esquecer exames, vacinas ou ficar se perguntando o que fazer em cada semana. Um mapa completo para acompanhar a evolução do seu bebê com total tranquilidade.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 pt-3 border-t border-purple-100">
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Tarefas e compromissos organizados por trimestre</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Campos para anotar dúvidas, pendências e datas</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Basta dar check nas tarefas realizadas</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Sem sobrecarga mental: saiba exatamente o foco de cada fase</span></div>
+              </div>
+            </div>
+            <div class="lg:col-span-5">
+              <div class="rounded-xl sm:rounded-2xl overflow-hidden border-2 border-purple-100 bg-purple-50 relative group shadow-sm sm:shadow-md">
+                <img src="https://adquiraonline.com/wp-content/uploads/2026/10/Planejador-de-Gravidez-em-Ambiente-Aconchegante.png" alt="Cronograma da Gestante" class="w-full h-44 sm:h-64 object-cover" referrerpolicy="no-referrer">
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-950/40 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-3 left-3 right-3 text-white text-xs bg-purple-950/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 font-bold flex items-center justify-between">
+                  <span>Organização Passo a Passo</span>
+                  <span class="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">Prático</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 02 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-8 shadow-sm sm:shadow-md hover:shadow-xl hover:border-purple-300 transition-all">
+          <div class="grid lg:grid-cols-12 gap-5 sm:gap-8 items-center">
+            <div class="lg:col-span-7 lg:order-2">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-11 h-11 rounded-2xl bg-purple-100 flex items-center justify-center shrink-0 border border-purple-200 shadow-sm">
+                  <svg class="w-5 h-5 text-[#EC4899]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs font-extrabold text-[#7C3AED] uppercase tracking-wider">MÓDULO 02 · Economia Inteligente</span>
+                  <h3 class="font-rounded-heading text-xl sm:text-2xl font-extrabold text-[#2E1065]">Checklist Roupas do Bebê</h3>
+                </div>
+              </div>
+              <p class="text-sm sm:text-base font-bold text-[#6D28D9] mb-3">Do RN aos 12 meses, sem exageros</p>
+              <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-6 font-medium">Listas práticas e editáveis, além de um fácil controle do que já foi comprado e lavado. O fim das roupinhas perdidas antes mesmo de usar ou de compras duplicadas.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 pt-3 border-t border-purple-100">
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Listas separadas por tamanho (RN até 12 meses)</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Controle prático de compras e lavagens</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Dicas reais sobre quantidade, clima e uso real</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Tabela indicativa para economizar sem abrir mão do conforto</span></div>
+              </div>
+            </div>
+            <div class="lg:col-span-5 lg:order-1">
+              <div class="rounded-xl sm:rounded-2xl overflow-hidden border-2 border-purple-100 bg-purple-50 relative group shadow-sm sm:shadow-md">
+                <img src="https://adquiraonline.com/wp-content/uploads/2026/10/Preparativos-do-bebe-com-checklist-no-tablet.png" alt="Checklist Roupas do Bebê" class="w-full h-44 sm:h-64 object-cover" referrerpolicy="no-referrer">
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-950/40 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-3 left-3 right-3 text-white text-xs bg-purple-950/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 font-bold flex items-center justify-between">
+                  <span>Economia Inteligente</span>
+                  <span class="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">Prático</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 03 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-8 shadow-sm sm:shadow-md hover:shadow-xl hover:border-purple-300 transition-all">
+          <div class="grid lg:grid-cols-12 gap-5 sm:gap-8 items-center">
+            <div class="lg:col-span-7">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-11 h-11 rounded-2xl bg-purple-100 flex items-center justify-center shrink-0 border border-purple-200 shadow-sm">
+                  <svg class="w-5 h-5 text-[#8B5CF6]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16.5 9.4-9-5.19M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs font-extrabold text-[#7C3AED] uppercase tracking-wider">MÓDULO 03 · Tudo por Categoria</span>
+                  <h3 class="font-rounded-heading text-xl sm:text-2xl font-extrabold text-[#2E1065]">Acessórios Essenciais por Categoria</h3>
+                </div>
+              </div>
+              <p class="text-sm sm:text-base font-bold text-[#6D28D9] mb-3">Tudo o que você precisa, com curadoria minuciosa</p>
+              <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-6 font-medium">Itens úteis e selecionados divididos por temas, para você dar check no que já tem e não gastar dinheiro com 'tralhas' que só ocupam espaço na gaveta.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 pt-3 border-t border-purple-100">
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Categorias práticas: banho, cuidados, tecidos, passeio...</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Controle do que foi comprado e do que já foi higienizado</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Notas com dicas para fazer escolhas conscientes</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Filtro antimarketing: o que realmente funciona</span></div>
+              </div>
+            </div>
+            <div class="lg:col-span-5">
+              <div class="rounded-xl sm:rounded-2xl overflow-hidden border-2 border-purple-100 bg-purple-50 relative group shadow-sm sm:shadow-md">
+                <img src="https://adquiraonline.com/wp-content/uploads/2026/10/Aplicativo-de-Gestante-no-Cantinho-do-Bebe.png" alt="Acessórios Essenciais por Categoria" class="w-full h-44 sm:h-64 object-cover" referrerpolicy="no-referrer">
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-950/40 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-3 left-3 right-3 text-white text-xs bg-purple-950/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 font-bold flex items-center justify-between">
+                  <span>Tudo por Categoria</span>
+                  <span class="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">Prático</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 04 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-8 shadow-sm sm:shadow-md hover:shadow-xl hover:border-purple-300 transition-all">
+          <div class="grid lg:grid-cols-12 gap-5 sm:gap-8 items-center">
+            <div class="lg:col-span-7 lg:order-2">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-11 h-11 rounded-2xl bg-purple-100 flex items-center justify-center shrink-0 border border-purple-200 shadow-sm">
+                  <svg class="w-5 h-5 text-[#6D28D9]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 20h12V8a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v12Z"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><line x1="9" x2="9" y1="20" y2="22"/><line x1="15" x2="15" y1="20" y2="22"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs font-extrabold text-[#7C3AED] uppercase tracking-wider">MÓDULO 04 · Pronta Para o Grande Dia</span>
+                  <h3 class="font-rounded-heading text-xl sm:text-2xl font-extrabold text-[#2E1065]">Mala Maternidade e Passeios</h3>
+                </div>
+              </div>
+              <p class="text-sm sm:text-base font-bold text-[#6D28D9] mb-3">Pronta para o grande dia (e os próximos com zero estresse)</p>
+              <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-6 font-medium">Checklist completo e organizado para preparar a mala da maternidade e a mochila de passeios sem esquecer nada de essencial na correria.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 pt-3 border-t border-purple-100">
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Itens divididos por: mamãe, bebê e acompanhante</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Documentos essenciais e o que levar para registrar o bebê</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Lista prática do que ter sempre na bolsa de passeio</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Dicas para organizar em saquinhos identificados</span></div>
+              </div>
+            </div>
+            <div class="lg:col-span-5 lg:order-1">
+              <div class="rounded-xl sm:rounded-2xl overflow-hidden border-2 border-purple-100 bg-purple-50 relative group shadow-sm sm:shadow-md">
+                <img src="https://adquiraonline.com/wp-content/uploads/2026/10/Guia-da-Gestante-Organizada-7.png" alt="Mala Maternidade e Passeios" class="w-full h-44 sm:h-64 object-cover" referrerpolicy="no-referrer">
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-950/40 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-3 left-3 right-3 text-white text-xs bg-purple-950/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 font-bold flex items-center justify-between">
+                  <span>Pronta Para o Grande Dia</span>
+                  <span class="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">Prático</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Módulo 05 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-8 shadow-sm sm:shadow-md hover:shadow-xl hover:border-purple-300 transition-all">
+          <div class="grid lg:grid-cols-12 gap-5 sm:gap-8 items-center">
+            <div class="lg:col-span-7">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-11 h-11 rounded-2xl bg-purple-100 flex items-center justify-center shrink-0 border border-purple-200 shadow-sm">
+                  <svg class="w-5 h-5 text-[#D946EF]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                </div>
+                <div>
+                  <span class="text-xs font-extrabold text-[#7C3AED] uppercase tracking-wider">MÓDULO 05 · O Cantinho dos Seus Sonhos</span>
+                  <h3 class="font-rounded-heading text-xl sm:text-2xl font-extrabold text-[#2E1065]">Minhas Inspirações</h3>
+                </div>
+              </div>
+              <p class="text-sm sm:text-base font-bold text-[#6D28D9] mb-3">Monte o enxoval do seu jeitinho</p>
+              <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-6 font-medium">Espaço livre para reunir ideias, imagens e links que combinam com o seu estilo e os seus sonhos para esse momento tão especial da sua vida.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 pt-3 border-t border-purple-100">
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Categorias editáveis para salvar inspirações</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Campos para colar links e registrar observações</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Um cantinho só seu para sonhar e planejar</span></div>
+                <div class="flex items-start gap-2"><span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center text-xs shrink-0 mt-0.5 font-extrabold">✓</span><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Compartilhe facilmente com seu parceiro(a)</span></div>
+              </div>
+            </div>
+            <div class="lg:col-span-5">
+              <div class="rounded-xl sm:rounded-2xl overflow-hidden border-2 border-purple-100 bg-purple-50 relative group shadow-sm sm:shadow-md">
+                <img src="https://adquiraonline.com/wp-content/uploads/2026/10/Espaco-Pastel-da-Gestante-Organizada.png" alt="Minhas Inspirações" class="w-full h-44 sm:h-64 object-cover" referrerpolicy="no-referrer">
+                <div class="absolute inset-0 bg-gradient-to-t from-purple-950/40 via-transparent to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-3 left-3 right-3 text-white text-xs bg-purple-950/60 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 font-bold flex items-center justify-between">
+                  <span>O Cantinho dos Seus Sonhos</span>
+                  <span class="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">Prático</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. DEGUSTAÇÃO INTERATIVA (CHECKLIST AO VIVO) -->
+  <section id="demonstracao" class="py-14 sm:py-20 bg-white border-b border-purple-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-extrabold tracking-wider text-[#7C3AED] uppercase bg-purple-100 px-3 py-1 rounded-full">
+          📲 Degustação ao Vivo
+        </span>
+        <h2 class="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mt-3 mb-3">
+          Experimente a praticidade: clique e marque as tarefas
+        </h2>
+        <p class="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
+          Veja como é simples e gostoso acompanhar sua gravidez sem planilhas confusas ou complicação.
+        </p>
+      </div>
+
+      <div class="bg-[#FAF7FD] rounded-2xl sm:rounded-3xl border-2 border-purple-200 shadow-lg sm:shadow-xl p-4 sm:p-8 relative overflow-hidden">
+        <div class="flex flex-wrap items-center justify-between gap-3 sm:gap-4 pb-4 border-b border-purple-100">
+          <div class="flex items-center gap-2.5 sm:gap-3">
+            <span class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-[#7C3AED] to-[#EC4899] text-white flex items-center justify-center text-sm font-bold shadow-sm shrink-0">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+            </span>
+            <div>
+              <h4 class="text-sm sm:text-base font-extrabold text-[#2E1065]">Meu Cronograma Gestacional</h4>
+              <p class="text-[11px] sm:text-xs text-[#6D28D9]/70 font-medium">Toque nos itens para marcar como concluído</p>
+            </div>
+          </div>
+
+          <!-- Abas dos Trimestres -->
+          <div class="flex items-center gap-1 p-1 bg-purple-100/70 rounded-xl text-xs font-bold">
+            <button id="ggo-tab-0" onclick="ggoSetTrimester(0)" class="px-3 py-1.5 sm:px-3.5 rounded-lg sm:rounded-xl transition-all bg-white text-[#7C3AED] shadow-sm font-extrabold">1º Tri</button>
+            <button id="ggo-tab-1" onclick="ggoSetTrimester(1)" class="px-3 py-1.5 sm:px-3.5 rounded-lg sm:rounded-xl transition-all text-[#6D28D9]/70 hover:text-[#4C1D95]">2º Tri</button>
+            <button id="ggo-tab-2" onclick="ggoSetTrimester(2)" class="px-3 py-1.5 sm:px-3.5 rounded-lg sm:rounded-xl transition-all text-[#6D28D9]/70 hover:text-[#4C1D95]">3º Tri</button>
+          </div>
+        </div>
+
+        <!-- Banner de Foco Atual -->
+        <div class="mt-4 p-4 bg-white rounded-2xl border border-purple-100 flex items-center justify-between gap-3 shadow-sm">
+          <div>
+            <span id="ggo-tri-title" class="text-xs font-extrabold text-[#7C3AED] uppercase">1º Trimestre (Semanas 1 a 13)</span>
+            <p class="text-xs sm:text-sm text-[#4C1D95] font-semibold">
+              <strong>Foco:</strong> <span id="ggo-tri-focus">Cuidado com o corpo, exames iniciais e acolhimento da notícia</span>
+            </p>
+          </div>
+          <div class="text-right shrink-0">
+            <span id="ggo-tri-progress-text" class="text-xs font-extrabold text-emerald-700 tabular-nums">2/4 concluídos (50%)</span>
+            <div class="w-24 sm:w-28 bg-purple-100 h-2.5 rounded-full overflow-hidden mt-1">
+              <div id="ggo-tri-progress-bar" class="bg-gradient-to-r from-[#7C3AED] to-[#10B981] h-full transition-all duration-300" style="width: 50%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Itens Interativos do Checklist -->
+        <div id="ggo-checklist-tasks" class="mt-4 space-y-2.5">
+          <!-- Injetado dinamicamente via JS -->
+        </div>
+
+        <!-- CTA da Lista Completa -->
+        <div class="mt-6 pt-5 border-t border-purple-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2 text-xs text-[#581C87] font-semibold text-center sm:text-left">
+            <svg class="w-4 h-4 text-amber-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            <span>O guia completo possui mais de <strong>120 itens organizados</strong> por fases e categorias.</span>
+          </div>
+          <a href="https://pay.kiwify.com.br/y44PvSo" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-3 sm:py-2.5 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all whitespace-nowrap">
+            <span>Quero a Lista Completa</span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CALCULADORA DE ECONOMIA NO ENXOVAL -->
+  <section class="py-14 sm:py-20 bg-[#FAF7FD] border-b border-purple-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-extrabold tracking-wider text-emerald-800 uppercase bg-emerald-100 px-3 py-1 rounded-full">
+          💰 Economia Real no Bolso
+        </span>
+        <h2 class="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mt-3 mb-3">
+          Seu bebê precisa mesmo de tudo isso?
+        </h2>
+        <p class="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
+          Veja quanto você pode economizar evitando compras por impulso no enxoval.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-8 shadow-md sm:shadow-lg">
+        <div id="ggo-calc-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mb-6 sm:mb-8">
+          <!-- Injetado dinamicamente via JS -->
+        </div>
+
+        <!-- Caixa de Resultado do Total Economizado -->
+        <div class="bg-gradient-to-r from-purple-100 via-pink-50 to-purple-100 rounded-2xl p-4 sm:p-6 border-2 border-purple-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3 sm:gap-3.5 w-full sm:w-auto">
+            <div class="w-12 h-12 sm:w-13 sm:h-13 rounded-2xl bg-gradient-to-tr from-[#7C3AED] to-[#EC4899] text-white flex items-center justify-center shrink-0 shadow-md">
+              <svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z"/><path d="M2 9v1c0 1.1.9 2 2 2h1"/><circle cx="16" cy="11" r="1"/></svg>
+            </div>
+            <div>
+              <span class="text-[11px] sm:text-xs font-extrabold text-[#7C3AED] uppercase tracking-wider block">
+                Total Economizado no Enxoval:
+              </span>
+              <div id="ggo-calc-total" class="font-rounded-heading text-2xl sm:text-4xl font-extrabold text-[#4C1D95] tabular-nums">
+                R$ 2.150,00
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center sm:text-right w-full sm:w-auto">
+            <p class="text-xs font-bold text-[#6D28D9] mb-2">
+              O Guia custa só <strong>R$ 47,00</strong> e se paga na hora!
+            </p>
+            <a href="https://pay.kiwify.com.br/y44PvSo" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-3 sm:py-2.5 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all">
+              <span>Garantir Minha Economia</span>
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. 3 BÔNUS EXCLUSIVOS -->
+  <section id="bonus" class="py-10 sm:py-20 bg-white border-b border-purple-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-gradient-to-r from-purple-100 to-pink-100 text-[#7C3AED] text-xs font-extrabold rounded-full mb-3 border border-purple-200">
+          <svg class="w-3.5 h-3.5 text-[#EC4899]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 4.8 0 0 1 12 8a4.8 4.8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+          <span>3 PRESENTES ESPECIAIS INCLUSOS HOJE</span>
+        </div>
+        <h2 class="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mb-3 sm:mb-4">
+          Bônus Exclusivos que acompanham o Guia
+        </h2>
+        <p class="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
+          Se fossem adquiridos separadamente, esses 3 bônus custariam mais de <strong class="text-[#7C3AED]">R$ 109,70</strong>. Hoje, você leva todos gratuitamente!
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 items-stretch">
+        <!-- Bônus 1 -->
+        <div class="bg-[#FAF7FD] rounded-2xl sm:rounded-3xl border-2 border-purple-200 p-4 sm:p-6 flex flex-col justify-between hover:border-purple-400 hover:shadow-xl transition-all relative overflow-hidden group shadow-sm sm:shadow-md">
+          <div>
+            <div class="rounded-xl sm:rounded-2xl overflow-hidden border border-purple-200 mb-4 sm:mb-5 relative group-hover:scale-[1.02] transition-transform duration-300 shadow-sm bg-purple-100">
+              <img src="https://adquiraonline.com/wp-content/uploads/2026/10/Planilha-do-Enxoval-em-Clima-Aconchegante.png" alt="Planilha Financeira para Controle do Enxoval" class="w-full h-44 sm:h-52 object-cover" referrerpolicy="no-referrer">
+              <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-[#7C3AED] text-xs font-extrabold px-3 py-1 rounded-full shadow-sm">BÔNUS 01</div>
+              <div class="absolute top-3 right-3 bg-emerald-500 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-sm">GRÁTIS</div>
+            </div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-semibold text-slate-400 line-through">Valor Normal: R$ 29,90</span>
+              <span class="text-xs font-extrabold text-[#7C3AED] bg-purple-100 px-2 py-0.5 rounded-lg">GRÁTIS HOJE</span>
+            </div>
+            <div class="flex items-start gap-2.5 mb-3">
+              <div class="w-8 h-8 rounded-xl bg-purple-100 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-[#7C3AED]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+              </div>
+              <h3 class="font-rounded-heading text-lg font-extrabold text-[#2E1065] leading-snug">Planilha Financeira para Controle do Enxoval</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-5 font-medium">Uma ferramenta que ajuda você a tomar decisões conscientes e manter a tranquilidade financeira durante a gravidez.</p>
+            <div class="space-y-2 pt-4 border-t border-purple-200/70">
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Acompanhe seus gastos em tempo real com gráficos visuais</span></div>
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Tenha clareza sobre quanto já foi investido e quanto resta</span></div>
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Evite compras duplicadas ou por impulso</span></div>
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Defina orçamentos máximos por categoria</span></div>
+            </div>
+          </div>
+          <div class="mt-6 pt-3 text-[11px] font-extrabold text-[#7C3AED] flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            <span>Incluso no pacote especial de R$ 47</span>
+          </div>
+        </div>
+
+        <!-- Bônus 2 -->
+        <div class="bg-[#FAF7FD] rounded-2xl sm:rounded-3xl border-2 border-purple-200 p-4 sm:p-6 flex flex-col justify-between hover:border-purple-400 hover:shadow-xl transition-all relative overflow-hidden group shadow-sm sm:shadow-md">
+          <div>
+            <div class="rounded-xl sm:rounded-2xl overflow-hidden border border-purple-200 mb-4 sm:mb-5 relative group-hover:scale-[1.02] transition-transform duration-300 shadow-sm bg-purple-100">
+              <img src="https://adquiraonline.com/wp-content/uploads/2026/10/Tablet-com-Chat-de-Enxoval-em-Ambiente-Aconchegante.png" alt="Enxoval Personalizado com Inteligência Artificial" class="w-full h-44 sm:h-52 object-cover" referrerpolicy="no-referrer">
+              <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-[#7C3AED] text-xs font-extrabold px-3 py-1 rounded-full shadow-sm">BÔNUS 02</div>
+              <div class="absolute top-3 right-3 bg-emerald-500 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-sm">GRÁTIS</div>
+            </div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-semibold text-slate-400 line-through">Valor Normal: R$ 39,90</span>
+              <span class="text-xs font-extrabold text-[#7C3AED] bg-purple-100 px-2 py-0.5 rounded-lg">EXCLUSIVO</span>
+            </div>
+            <div class="flex items-start gap-2.5 mb-3">
+              <div class="w-8 h-8 rounded-xl bg-purple-100 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-[#EC4899]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+              </div>
+              <h3 class="font-rounded-heading text-lg font-extrabold text-[#2E1065] leading-snug">Enxoval Personalizado com Inteligência Artificial</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-5 font-medium">Chega de listas genéricas! Com este comando você vai ter a sua lista personalizada feita sob medida no ChatGPT em 2 minutos.</p>
+            <div class="space-y-2 pt-4 border-t border-purple-200/70">
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Prompt pronto para preencher com suas informações em 2 minutos</span></div>
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Sugestões personalizadas por clima, rotina e moradia</span></div>
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Evite excessos e monte um enxoval funcional e inteligente</span></div>
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Adaptado se seu bebê nasce no verão ou inverno</span></div>
+            </div>
+          </div>
+          <div class="mt-6 pt-3 text-[11px] font-extrabold text-[#7C3AED] flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            <span>Incluso no pacote especial de R$ 47</span>
+          </div>
+        </div>
+
+        <!-- Bônus 3 -->
+        <div class="bg-[#FAF7FD] rounded-2xl sm:rounded-3xl border-2 border-purple-200 p-4 sm:p-6 flex flex-col justify-between hover:border-purple-400 hover:shadow-xl transition-all relative overflow-hidden group shadow-sm sm:shadow-md">
+          <div>
+            <div class="rounded-xl sm:rounded-2xl overflow-hidden border border-purple-200 mb-4 sm:mb-5 relative group-hover:scale-[1.02] transition-transform duration-300 shadow-sm bg-purple-100">
+              <img src="https://adquiraonline.com/wp-content/uploads/2026/10/Guia-de-enxoval-na-palma-da-mao.png" alt="Lista Secreta com Links Diretos" class="w-full h-44 sm:h-52 object-cover" referrerpolicy="no-referrer">
+              <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm text-[#7C3AED] text-xs font-extrabold px-3 py-1 rounded-full shadow-sm">BÔNUS 03</div>
+              <div class="absolute top-3 right-3 bg-emerald-500 text-white text-xs font-extrabold px-3 py-1 rounded-full shadow-sm">GRÁTIS</div>
+            </div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-semibold text-slate-400 line-through">Valor Normal: R$ 39,90</span>
+              <span class="text-xs font-extrabold text-[#7C3AED] bg-purple-100 px-2 py-0.5 rounded-lg">SUPER PRÁTICO</span>
+            </div>
+            <div class="flex items-start gap-2.5 mb-3">
+              <div class="w-8 h-8 rounded-xl bg-purple-100 flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-[#8B5CF6]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              </div>
+              <h3 class="font-rounded-heading text-lg font-extrabold text-[#2E1065] leading-snug">Lista Secreta com Links Diretos para os Melhores Itens do Enxoval</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-5 font-medium">Chega de perder horas pesquisando em qual loja confiar. Uma lista exclusiva com os melhores achados da internet!</p>
+            <div class="space-y-2 pt-4 border-t border-purple-200/70">
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Links diretos para adicionar no carrinho com 1 clique</span></div>
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Somente vendedores confiáveis com as melhores avaliações</span></div>
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Itens úteis, testados e recomendados por mães reais</span></div>
+              <div class="flex items-start gap-2"><div class="w-4 h-4 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div><span class="text-xs text-[#3B0764] leading-relaxed font-semibold">Melhor custo-benefício garantido para economizar</span></div>
+            </div>
+          </div>
+          <div class="mt-6 pt-3 text-[11px] font-extrabold text-[#7C3AED] flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            <span>Incluso no pacote especial de R$ 47</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner Callout do Bônus -->
+      <div class="mt-8 sm:mt-12 bg-gradient-to-r from-purple-100 via-pink-100 to-purple-100 rounded-2xl sm:rounded-3xl p-5 sm:p-8 border-2 border-purple-200 flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6 text-center sm:text-left shadow-sm sm:shadow-md">
+        <div>
+          <h4 class="font-rounded-heading text-base sm:text-xl font-extrabold text-[#2E1065]">
+            Economia Imediata: R$ 109,70 em bônus + R$ 50,00 de desconto no Guia!
+          </h4>
+          <p class="text-xs sm:text-sm text-[#581C87] font-semibold mt-1">
+            Você leva mais de R$ 200 em valor prático por apenas R$ 47,00 em parcela única.
+          </p>
+        </div>
+        <a href="https://pay.kiwify.com.br/y44PvSo" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white text-xs sm:text-sm font-extrabold rounded-xl sm:rounded-2xl shadow-lg shadow-purple-500/25 transition-all whitespace-nowrap active:scale-95">
+          <span>QUERO TODOS OS BÔNUS</span>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. DEPOIMENTOS DE MÃES -->
+  <section id="depoimentos" class="py-10 sm:py-20 bg-[#FAF7FD] border-b border-purple-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-pink-100 text-[#EC4899] text-xs font-extrabold rounded-full mb-3 border border-pink-200">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          <span>Mães Reais, Histórias Reais</span>
+        </div>
+        <h2 class="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mb-3 sm:mb-4">
+          Veja o que dizem as futuras mães que usam o Guia
+        </h2>
+        <p class="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
+          Mais de 4.000 gestantes já transformaram a ansiedade do enxoval em paz e segurança diária.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5 sm:gap-8">
+        <!-- Depoimento 1 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-7 shadow-sm sm:shadow-md hover:shadow-xl hover:border-purple-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-1 text-amber-500">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="text-[10px] sm:text-[11px] font-bold text-emerald-800 flex items-center gap-1 bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Compra Verificada
+              </span>
+            </div>
+            <div class="font-bold text-sm sm:text-[15px] text-[#2E1065] mb-2 sm:mb-3 flex items-start gap-2">
+              <svg class="w-4 h-4 text-[#7C3AED] shrink-0 mt-0.5 opacity-60" viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/></svg>
+              <span>"Economizei pelo menos R$ 1.800 em coisas inúteis!"</span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-5 sm:mb-6 italic font-medium">
+              "Eu estava à beira do desespero com tantas listas do Instagram falando coisas totalmente opostas. O Guia me trouxe paz. Ver tudo dividido certinho por trimestre e saber exatamente quantas peças de cada tamanho comprar me poupou rios de dinheiro e crises de ansiedade."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 sm:pt-4 border-t border-purple-100">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&h=150&q=80" alt="Camila Santana" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-purple-200 shadow-sm" referrerpolicy="no-referrer">
+            <div>
+              <h4 class="text-xs sm:text-sm font-extrabold text-[#2E1065]">Camila Santana</h4>
+              <div class="text-[11px] sm:text-xs text-[#7C3AED] font-semibold">
+                <span>34ª Semana de Gestação</span>
+                <span class="mx-1 text-purple-300">·</span>
+                <span>São Paulo - SP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-7 shadow-sm sm:shadow-md hover:shadow-xl hover:border-purple-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-1 text-amber-500">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="text-[10px] sm:text-[11px] font-bold text-emerald-800 flex items-center gap-1 bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Compra Verificada
+              </span>
+            </div>
+            <div class="font-bold text-sm sm:text-[15px] text-[#2E1065] mb-2 sm:mb-3 flex items-start gap-2">
+              <svg class="w-4 h-4 text-[#7C3AED] shrink-0 mt-0.5 opacity-60" viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/></svg>
+              <span>"A mala maternidade foi um alívio surreal no hospital."</span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-5 sm:mb-6 italic font-medium">
+              "Meu parto adiantou duas semanas e graças ao Guia a mala já estava 100% pronta com os saquinhos etiquetados para a mamãe, bebê e meu marido. As enfermeiras da maternidade até elogiaram a organização. Vale cada centavo!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 sm:pt-4 border-t border-purple-100">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" alt="Mariana Albuquerque" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-purple-200 shadow-sm" referrerpolicy="no-referrer">
+            <div>
+              <h4 class="text-xs sm:text-sm font-extrabold text-[#2E1065]">Mariana Albuquerque</h4>
+              <div class="text-[11px] sm:text-xs text-[#7C3AED] font-semibold">
+                <span>Mãe do Theo (2 meses)</span>
+                <span class="mx-1 text-purple-300">·</span>
+                <span>Belo Horizonte - MG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-7 shadow-sm sm:shadow-md hover:shadow-xl hover:border-purple-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-1 text-amber-500">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="text-[10px] sm:text-[11px] font-bold text-emerald-800 flex items-center gap-1 bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Compra Verificada
+              </span>
+            </div>
+            <div class="font-bold text-sm sm:text-[15px] text-[#2E1065] mb-2 sm:mb-3 flex items-start gap-2">
+              <svg class="w-4 h-4 text-[#7C3AED] shrink-0 mt-0.5 opacity-60" viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/></svg>
+              <span>"Recomendo para todas as minhas pacientes."</span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-5 sm:mb-6 italic font-medium">
+              "Como médica vejo diariamente pacientes sobrecarregadas e confusas. Este guia tem uma abordagem responsável, prática e sem exageros de consumo. O bônus da lista personalizada com ChatGPT é genial e muito assertivo."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 sm:pt-4 border-t border-purple-100">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80" alt="Dra. Beatriz Nogueira" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-purple-200 shadow-sm" referrerpolicy="no-referrer">
+            <div>
+              <h4 class="text-xs sm:text-sm font-extrabold text-[#2E1065]">Dra. Beatriz Nogueira</h4>
+              <div class="text-[11px] sm:text-xs text-[#7C3AED] font-semibold">
+                <span>Obstetra e Mãe de 2</span>
+                <span class="mx-1 text-purple-300">·</span>
+                <span>Curitiba - PR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 4 -->
+        <div class="bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 p-4 sm:p-7 shadow-sm sm:shadow-md hover:shadow-xl hover:border-purple-300 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-1 text-amber-500">
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="text-[10px] sm:text-[11px] font-bold text-emerald-800 flex items-center gap-1 bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Compra Verificada
+              </span>
+            </div>
+            <div class="font-bold text-sm sm:text-[15px] text-[#2E1065] mb-2 sm:mb-3 flex items-start gap-2">
+              <svg class="w-4 h-4 text-[#7C3AED] shrink-0 mt-0.5 opacity-60" viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/></svg>
+              <span>"A planilha financeira salvou nosso orçamento."</span>
+            </div>
+            <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-5 sm:mb-6 italic font-medium">
+              "Tínhamos muito medo de estourar as contas da família com o enxoval. A planilha de controle financeiro inclusa no bônus fez a gente ter clareza de cada centavo. Conseguimos comprar tudo com qualidade sem nos endividar."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 sm:pt-4 border-t border-purple-100">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&h=150&q=80" alt="Juliana & Rafael Mendes" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-purple-200 shadow-sm" referrerpolicy="no-referrer">
+            <div>
+              <h4 class="text-xs sm:text-sm font-extrabold text-[#2E1065]">Juliana & Rafael Mendes</h4>
+              <div class="text-[11px] sm:text-xs text-[#7C3AED] font-semibold">
+                <span>Pais de Primeira Viagem</span>
+                <span class="mx-1 text-purple-300">·</span>
+                <span>Campinas - SP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de Avaliação / Confiança -->
+      <div class="mt-8 sm:mt-12 p-5 sm:p-6 bg-white rounded-2xl sm:rounded-3xl border-2 border-purple-100 shadow-sm sm:shadow-md grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center text-xs text-[#581C87]">
+        <div class="pb-3 sm:pb-0 border-b sm:border-b-0 sm:border-r border-purple-100">
+          <div class="font-rounded-heading text-2xl sm:text-3xl font-extrabold text-[#7C3AED]">+4.000</div>
+          <span class="text-purple-900/70 font-semibold">Gestantes Atendidas</span>
+        </div>
+        <div class="pb-3 sm:pb-0 border-b sm:border-b-0 sm:border-r border-purple-100">
+          <div class="font-rounded-heading text-2xl sm:text-3xl font-extrabold text-[#7C3AED]">⭐ 4.9 de 5.0</div>
+          <span class="text-purple-900/70 font-semibold">Avaliação Média</span>
+        </div>
+        <div>
+          <div class="font-rounded-heading text-2xl sm:text-3xl font-extrabold text-[#EC4899]">99.2%</div>
+          <span class="text-purple-900/70 font-semibold">Satisfação Positiva</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. SEÇÃO DA OFERTA (PRICING & CHECKOUT) -->
+  <section id="oferta" class="py-12 sm:py-24 bg-gradient-to-b from-[#FAF7FD] via-[#F3E8FF] to-[#FAF7FD] border-b border-purple-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-3xl sm:rounded-[36px] border-3 sm:border-4 border-[#7C3AED] p-5 sm:p-10 shadow-2xl relative">
+        <div class="absolute -top-4 sm:-top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] text-white text-[11px] sm:text-xs font-black uppercase tracking-widest px-4 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg whitespace-nowrap">
+          ⭐ OFERTA ESPECIAL POR TEMPO LIMITADO ⭐
+        </div>
+
+        <div class="pt-7 sm:pt-6 text-center">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-purple-100 text-[#7C3AED] text-[11px] sm:text-xs font-bold rounded-full mb-3">
+            <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Disponível Até: <strong>29/10/2026 - 23h59</strong></span>
+          </div>
+
+          <h2 class="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mb-2">
+            Guia da Gestante Organizada
+          </h2>
+          <p class="text-xs sm:text-base text-[#581C87]/80 mb-5 sm:mb-6 font-medium">
+            Pague apenas uma vez (sem mensalidades) e receba todos os bônus + acesso vitalício direto no seu smartphone.
+          </p>
+
+          <div class="inline-block bg-gradient-to-r from-emerald-100 via-teal-100 to-emerald-100 text-emerald-800 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs sm:text-sm font-extrabold tracking-wide mb-5 sm:mb-6 border border-emerald-200 shadow-sm">
+            🎉 APROVEITE R$ 50,00 DE DESCONTO HOJE
+          </div>
+
+          <!-- Mockup do Produto -->
+          <div class="mb-6 sm:mb-7 max-w-lg mx-auto">
+            <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-purple-200/90 shadow-md bg-gradient-to-b from-purple-50/50 to-white p-2 sm:p-3">
+              <img src="https://adquiraonline.com/wp-content/uploads/2026/11/Guia-da-Gestante-em-Dispositivos-e-Papeis.png" alt="Mockup do Guia da Gestante Organizada em dispositivos e materiais" class="w-full h-auto object-contain rounded-xl sm:rounded-2xl mx-auto shadow-sm" loading="lazy" referrerpolicy="no-referrer">
+            </div>
+          </div>
+
+          <!-- Bloco do Preço -->
+          <div class="mb-6 p-4 sm:p-7 bg-[#FAF7FD] rounded-2xl sm:rounded-3xl border-2 border-purple-200 shadow-inner">
+            <div class="text-sm sm:text-base line-through text-slate-400 font-bold mb-1">
+              De R$ 97,00
+            </div>
+            <div class="text-xs uppercase tracking-widest font-extrabold text-[#7C3AED] mb-1">
+              POR APENAS
+            </div>
+            <div class="flex items-baseline justify-center gap-1 font-rounded-heading">
+              <span class="text-xl sm:text-2xl font-extrabold text-[#2E1065]">R$</span>
+              <span class="text-4xl sm:text-6xl font-black text-[#7C3AED] tracking-tight">47,00</span>
+              <span class="text-xs sm:text-sm font-bold text-slate-500">à vista</span>
+            </div>
+            <div class="text-xs sm:text-base font-extrabold text-[#2E1065] mt-2">
+              Ou até <span class="text-[#7C3AED] bg-purple-100 px-2 py-0.5 rounded-lg underline underline-offset-2">11X de R$ 5,22</span>
+            </div>
+            <p class="text-[11px] sm:text-xs text-[#581C87]/70 font-semibold mt-2">
+              Menos de R$ 0,18 por dia para ter uma gravidez tranquila, leve e organizada.
+            </p>
+          </div>
+
+          <!-- O que está incluso -->
+          <div class="text-left space-y-2 sm:space-y-2.5 mb-6 sm:mb-8 max-w-xl mx-auto">
+            <p class="text-xs font-extrabold uppercase tracking-wider text-[#7C3AED] mb-3">
+              Tudo o que você vai receber imediatamente:
+            </p>
+            <div class="flex items-start gap-2.5"><div class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 text-xs font-extrabold">✓</div><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Cronograma Completo da Gestante (Módulo 1)</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 text-xs font-extrabold">✓</div><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Checklist Roupas do Bebê do RN aos 12 meses (Módulo 2)</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 text-xs font-extrabold">✓</div><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Curadoria de Acessórios Essenciais sem excessos (Módulo 3)</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 text-xs font-extrabold">✓</div><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Mala de Maternidade Pronta e Sem Neura (Módulo 4)</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 text-xs font-extrabold">✓</div><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium">Espaço Minhas Inspirações para o Quarto dos Sonhos (Módulo 5)</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 text-xs font-extrabold">✓</div><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium"><strong>BÔNUS 1:</strong> Planilha Financeira Inteligente (Valor: R$ 29,90)</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 text-xs font-extrabold">✓</div><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium"><strong>BÔNUS 2:</strong> Enxoval com IA no ChatGPT (Valor: R$ 39,90)</span></div>
+            <div class="flex items-start gap-2.5"><div class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 mt-0.5 text-xs font-extrabold">✓</div><span class="text-xs sm:text-sm text-[#3B0764] leading-snug font-medium"><strong>BÔNUS 3:</strong> Lista Secreta com Links Diretos (Valor: R$ 39,90)</span></div>
+          </div>
+
+          <!-- Botão Principal de Compra -->
+          <div class="space-y-3">
+            <a href="https://pay.kiwify.com.br/y44PvSo" target="_blank" rel="noopener noreferrer" class="w-full inline-flex flex-col sm:flex-row items-center justify-center gap-2 px-4 py-4 sm:py-5 text-sm sm:text-lg font-black text-white bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#EC4899] hover:opacity-95 active:scale-[0.99] rounded-xl sm:rounded-2xl shadow-xl shadow-purple-500/30 transition-all text-center leading-tight ggo-animate-pulse-subtle group">
+              <span>COMEÇAR AGORA MESMO DIRETO NO MEU CELULAR!</span>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 shrink-0 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-[#6D28D9] pt-2 font-semibold">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Checkout Blindado Kiwify
+              </span>
+              <span class="text-purple-300">·</span>
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                Acesso Imediato
+              </span>
+              <span class="text-purple-300">·</span>
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                Garantia de 7 Dias
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. GARANTIA BLINDADA DE 7 DIAS -->
+  <section class="py-10 sm:py-20 bg-white border-b border-purple-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-gradient-to-r from-purple-50 via-pink-50 to-purple-50 rounded-2xl sm:rounded-3xl border-2 border-purple-200 p-5 sm:p-10 flex flex-col md:flex-row items-center gap-6 sm:gap-8 shadow-sm sm:shadow-md">
+        <div class="relative shrink-0">
+          <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl sm:rounded-3xl bg-white border-2 sm:border-3 border-dashed border-[#7C3AED] flex flex-col items-center justify-center text-center p-2 sm:p-3 shadow-md sm:shadow-lg">
+            <svg class="w-7 h-7 sm:w-8 sm:h-8 text-[#7C3AED] mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            <span class="font-rounded-heading text-lg sm:text-2xl font-extrabold text-[#2E1065] leading-none">7 DIAS</span>
+            <span class="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider text-[#7C3AED] mt-1">Garantia Total</span>
+          </div>
+        </div>
+
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2 text-xs font-extrabold text-emerald-800 uppercase tracking-wider mb-2">
+            <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <span>Compra 100% Livre de Riscos</span>
+          </div>
+          <h3 class="font-rounded-heading text-xl sm:text-2xl font-extrabold text-[#2E1065] mb-3">
+            Teste o Guia por 7 dias inteiros. O risco é todo nosso!
+          </h3>
+          <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed mb-4 font-medium">
+            Acreditamos tanto no impacto positivo do <strong>Guia da Gestante Organizada</strong> que assumimos todo o risco por você. Acesse todo o conteúdo, teste os checklists, use a planilha financeira e o gerador de enxoval com IA.
+          </p>
+          <p class="text-xs sm:text-sm text-[#581C87]/80 leading-relaxed font-medium">
+            Se por qualquer motivo você sentir que não foi o melhor investimento para sua gestação, basta solicitar o reembolso na Kiwify com 1 clique e devolveremos 100% do seu dinheiro. Sem burocracia, sem perguntas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. FAQ / DÚVIDAS FREQUENTES -->
+  <section id="faq" class="py-10 sm:py-20 bg-[#FAF7FD] border-b border-purple-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-xl mx-auto mb-8 sm:mb-12">
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 bg-purple-100 text-[#7C3AED] text-xs font-extrabold rounded-full mb-3">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+          <span>Perguntas Frequentes</span>
+        </div>
+        <h2 class="font-rounded-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2E1065] mb-3">
+          Ainda tem alguma dúvida?
+        </h2>
+        <p class="text-sm sm:text-base text-[#581C87]/80 leading-relaxed font-medium">
+          Veja as respostas para as perguntas mais comuns de outras futuras mamães antes de começar.
+        </p>
+      </div>
+
+      <div class="space-y-2.5 sm:space-y-3" id="ggo-faq-list">
+        <!-- Item FAQ 1 -->
+        <div class="bg-white rounded-xl sm:rounded-2xl border-2 border-purple-100 overflow-hidden transition-all shadow-sm">
+          <button onclick="ggoToggleFaq(0)" class="w-full text-left p-3.5 sm:p-5 flex items-center justify-between gap-3 sm:gap-4 hover:bg-purple-50/50 transition-colors">
+            <span class="text-xs sm:text-base font-extrabold text-[#2E1065] leading-snug">Como e quando recebo o acesso ao Guia?</span>
+            <div id="ggo-faq-icon-0" class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#7C3AED] text-white flex items-center justify-center shrink-0 transition-transform duration-200 rotate-180">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </button>
+          <div id="ggo-faq-ans-0" class="px-3.5 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-[#581C87]/80 leading-relaxed border-t border-purple-100 font-medium">
+            O acesso é imediato! Assim que o seu pagamento for confirmado pela Kiwify, você recebe um e-mail com os seus dados de acesso e o link direto para começar a usar no seu celular, tablet ou computador imediatamente.
+          </div>
+        </div>
+
+        <!-- Item FAQ 2 -->
+        <div class="bg-white rounded-xl sm:rounded-2xl border-2 border-purple-100 overflow-hidden transition-all shadow-sm">
+          <button onclick="ggoToggleFaq(1)" class="w-full text-left p-3.5 sm:p-5 flex items-center justify-between gap-3 sm:gap-4 hover:bg-purple-50/50 transition-colors">
+            <span class="text-xs sm:text-base font-extrabold text-[#2E1065] leading-snug">Preciso instalar algum programa pesado ou funciona no celular?</span>
+            <div id="ggo-faq-icon-1" class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 transition-transform duration-200">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </button>
+          <div id="ggo-faq-ans-1" class="hidden px-3.5 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-[#581C87]/80 leading-relaxed border-t border-purple-100 font-medium">
+            Funciona 100% direto no seu celular! Você pode abrir pelo navegador, usar como aplicativo no seu smartphone ou baixar os materiais em formato interativo. É leve, rápido e fácil de mexer até mesmo na fila do médico.
+          </div>
+        </div>
+
+        <!-- Item FAQ 3 -->
+        <div class="bg-white rounded-xl sm:rounded-2xl border-2 border-purple-100 overflow-hidden transition-all shadow-sm">
+          <button onclick="ggoToggleFaq(2)" class="w-full text-left p-3.5 sm:p-5 flex items-center justify-between gap-3 sm:gap-4 hover:bg-purple-50/50 transition-colors">
+            <span class="text-xs sm:text-base font-extrabold text-[#2E1065] leading-snug">É uma mensalidade ou pagamento único?</span>
+            <div id="ggo-faq-icon-2" class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 transition-transform duration-200">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </button>
+          <div id="ggo-faq-ans-2" class="hidden px-3.5 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-[#581C87]/80 leading-relaxed border-t border-purple-100 font-medium">
+            PAGAMENTO ÚNICO! Você paga apenas R$ 47,00 (ou parcela em até 11x de R$ 5,22) uma única vez e tem acesso vitalício ao Guia da Gestante Organizada e a todos os 3 bônus exclusivos, incluindo todas as atualizações futuras sem nenhuma taxa extra.
+          </div>
+        </div>
+
+        <!-- Item FAQ 4 -->
+        <div class="bg-white rounded-xl sm:rounded-2xl border-2 border-purple-100 overflow-hidden transition-all shadow-sm">
+          <button onclick="ggoToggleFaq(3)" class="w-full text-left p-3.5 sm:p-5 flex items-center justify-between gap-3 sm:gap-4 hover:bg-purple-50/50 transition-colors">
+            <span class="text-xs sm:text-base font-extrabold text-[#2E1065] leading-snug">Sou mãe de primeira viagem, vou conseguir me organizar mesmo sem entender nada?</span>
+            <div id="ggo-faq-icon-3" class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 transition-transform duration-200">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </button>
+          <div id="ggo-faq-ans-3" class="hidden px-3.5 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-[#581C87]/80 leading-relaxed border-t border-purple-100 font-medium">
+            Com certeza! O Guia foi desenhado especificamente pensando na futura mãe que não sabe por onde começar. A linguagem é simples, acolhedora, com checklists pré-prontos onde basta você dar o 'check' nas tarefas.
+          </div>
+        </div>
+
+        <!-- Item FAQ 5 -->
+        <div class="bg-white rounded-xl sm:rounded-2xl border-2 border-purple-100 overflow-hidden transition-all shadow-sm">
+          <button onclick="ggoToggleFaq(4)" class="w-full text-left p-3.5 sm:p-5 flex items-center justify-between gap-3 sm:gap-4 hover:bg-purple-50/50 transition-colors">
+            <span class="text-xs sm:text-base font-extrabold text-[#2E1065] leading-snug">Já estou no 2º ou 3º trimestre, ainda vale a pena para mim?</span>
+            <div id="ggo-faq-icon-4" class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 transition-transform duration-200">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </button>
+          <div id="ggo-faq-ans-4" class="hidden px-3.5 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-[#581C87]/80 leading-relaxed border-t border-purple-100 font-medium">
+            Vale muito! O guia possui seções dedicadas para quem está no 2º trimestre (compras estratégicas, roupinhas e acessórios) e 3º trimestre (mala da maternidade, lavagem das peças, documentos e preparativos finais para o parto).
+          </div>
+        </div>
+
+        <!-- Item FAQ 6 -->
+        <div class="bg-white rounded-xl sm:rounded-2xl border-2 border-purple-100 overflow-hidden transition-all shadow-sm">
+          <button onclick="ggoToggleFaq(5)" class="w-full text-left p-3.5 sm:p-5 flex items-center justify-between gap-3 sm:gap-4 hover:bg-purple-50/50 transition-colors">
+            <span class="text-xs sm:text-base font-extrabold text-[#2E1065] leading-snug">E se eu não gostar? Como funciona a garantia?</span>
+            <div id="ggo-faq-icon-5" class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-purple-100 text-[#7C3AED] flex items-center justify-center shrink-0 transition-transform duration-200">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </button>
+          <div id="ggo-faq-ans-5" class="hidden px-3.5 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-[#581C87]/80 leading-relaxed border-t border-purple-100 font-medium">
+            Você tem 7 dias de garantia incondicional blindada. Se por qualquer motivo você abrir o material e achar que ele não agregou para a sua gravidez, basta solicitar o reembolso na Kiwify com um clique que devolvemos 100% do seu dinheiro, sem perguntas e sem ressentimentos.
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 sm:mt-10 text-center">
+        <p class="text-xs text-[#7C3AED] font-bold mb-3">
+          Pronta para ter a gravidez mais tranquila e organizada da sua vida?
+        </p>
+        <a href="https://pay.kiwify.com.br/y44PvSo" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs sm:text-sm font-extrabold text-white bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 rounded-xl sm:rounded-2xl shadow-md transition-all active:scale-95">
+          <span>QUERO COMEÇAR POR APENAS R$ 47</span>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. RODAPÉ -->
+  <footer class="bg-[#1E0A38] text-[#E9D5FF] pt-10 sm:pt-12 pb-24 md:pb-12 border-t border-purple-900/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-12 gap-8 pb-10 border-b border-purple-900/50">
+        <div class="md:col-span-6">
+          <div class="flex items-center gap-2 font-rounded-heading text-lg font-extrabold text-white mb-3">
+            <span class="w-8 h-8 rounded-2xl bg-gradient-to-tr from-[#8B5CF6] to-[#EC4899] flex items-center justify-center text-white shrink-0 shadow-sm">
+              <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24" fill="currentColor"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </span>
+            <span>Guia da Gestante Organizada</span>
+          </div>
+          <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed max-w-sm mb-4 font-medium">
+            O método prático, leve e acolhedor para planejar a gestação dos seus sonhos, organizar o enxoval com inteligência e viver cada semana com leveza e paz mental.
+          </p>
+          <div class="flex items-center gap-3 text-xs text-purple-300 font-semibold">
+            <span class="flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+              100% no Celular
+            </span>
+            <span>·</span>
+            <span class="flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Compra Segura Kiwify
+            </span>
+          </div>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-white mb-3">Navegação</h4>
+          <ul class="space-y-2 text-xs text-purple-200/80 font-medium">
+            <li><a href="#conteudo" class="hover:text-white transition-colors">Conteúdo do Guia (5 Módulos)</a></li>
+            <li><a href="#demonstracao" class="hover:text-white transition-colors">Degustação Interativa</a></li>
+            <li><a href="#bonus" class="hover:text-white transition-colors">3 Bônus Exclusivos</a></li>
+            <li><a href="#depoimentos" class="hover:text-white transition-colors">Depoimentos de Mães</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">Dúvidas Frequentes</a></li>
+            <li><a href="#oferta" class="text-pink-300 font-bold hover:text-white transition-colors">Garantir Meu Guia com Desconto</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-white mb-3">Segurança e Suporte</h4>
+          <div class="space-y-2.5 text-xs text-purple-200/80 font-medium">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+              <span>Garantia Incondicional de 7 Dias</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>Pagamento Processado pela Kiwify</span>
+            </div>
+            <div class="pt-2">
+              <a href="https://pay.kiwify.com.br/y44PvSo" target="_blank" rel="noopener noreferrer" class="inline-block text-xs font-extrabold bg-gradient-to-r from-[#7C3AED] to-[#EC4899] text-white px-4 py-2 rounded-xl shadow-md hover:opacity-95 transition-all">
+                Acessar Guia por R$ 47
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-purple-300/60 font-medium text-center sm:text-left">
+        <p>© 2026 Guia da Gestante Organizada. Todos os direitos reservados.</p>
+        <p class="max-w-md">Este produto não substitui o acompanhamento médico, obstétrico e nutricional pré-natal profissional.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 15. BARRA FIXA FLUTUANTE NO MOBILE (STICKY CTA) -->
+  <div id="ggo-mobile-sticky-cta" class="hidden fixed bottom-0 inset-x-0 z-50 md:hidden bg-white/95 backdrop-blur-md border-t border-purple-200 px-3.5 pt-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-4px_16px_rgba(124,58,237,0.12)]">
+    <div class="flex items-center justify-between gap-3 max-w-md mx-auto">
+      <div class="flex flex-col">
+        <div class="flex items-center gap-1">
+          <span class="text-[10px] uppercase font-extrabold text-[#7C3AED] flex items-center gap-0.5">
+            <svg class="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            Oferta Hoje
+          </span>
+        </div>
+        <div class="flex items-baseline gap-1">
+          <span class="text-base font-black text-[#2E1065]">R$ 47,00</span>
+          <span class="text-[10px] text-slate-500 font-semibold">ou 11x R$ 5,22</span>
+        </div>
+      </div>
+
+      <a href="https://pay.kiwify.com.br/y44PvSo" target="_blank" rel="noopener noreferrer" class="flex-1 max-w-[210px] flex items-center justify-center gap-1.5 py-3 px-3 bg-gradient-to-r from-[#7C3AED] to-[#EC4899] hover:opacity-95 active:scale-95 text-white text-xs font-black rounded-xl shadow-md transition-all text-center whitespace-nowrap">
+        <span>QUERO O GUIA</span>
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT FUNCIONAL E INDEPENDENTE -->
+  <script>
+    (function() {
+      // 1. Contador Regressivo até 23:59:59 de Hoje
+      function initCountdown() {
+        var hEl = document.getElementById("ggo-cd-hours");
+        var mEl = document.getElementById("ggo-cd-mins");
+        var sEl = document.getElementById("ggo-cd-secs");
+
+        function update() {
+          var now = new Date();
+          var end = new Date(now);
+          end.setHours(23, 59, 59, 999);
+          var diff = end.getTime() - now.getTime();
+          if (diff <= 0) diff = 0;
+
+          var h = Math.floor(diff / (1000 * 60 * 60));
+          var m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          var s = Math.floor((diff % (1000 * 60)) / 1000);
+
+          if (hEl) hEl.textContent = String(h).padStart(2, "0");
+          if (mEl) mEl.textContent = String(m).padStart(2, "0");
+          if (sEl) sEl.textContent = String(s).padStart(2, "0");
+        }
+        update();
+        setInterval(update, 1000);
+      }
+
+      // 2. Calculadora de Economia do Enxoval
+      var wasteItems = [
+        { id: "1", name: "Aquecedor elétrico de lenço umedecido (resseca os lenços)", price: 240, checked: true },
+        { id: "2", name: "15 pares de sapatinhos para recém-nascido (que caem do pé)", price: 380, checked: true },
+        { id: "3", name: "Esterilizador elétrico volumoso (água fervente faz o mesmo)", price: 390, checked: true },
+        { id: "4", name: "Excesso de macacões de botão RN (perdem em 10 dias)", price: 540, checked: true },
+        { id: "5", name: "Aspirador nasal elétrico ineficiente", price: 180, checked: true },
+        { id: "6", name: "Bolsa de maternidade de grife pesada e nada prática", price: 420, checked: true }
+      ];
+
+      function renderCalculator() {
+        var grid = document.getElementById("ggo-calc-grid");
+        var totalEl = document.getElementById("ggo-calc-total");
+        if (!grid || !totalEl) return;
+
+        var total = 0;
+        var html = "";
+
+        wasteItems.forEach(function(item, idx) {
+          if (item.checked) total += item.price;
+          var isChecked = item.checked;
+          var btnClass = isChecked 
+            ? "p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 text-left transition-all flex items-center justify-between gap-2.5 sm:gap-3 bg-purple-50/70 border-purple-300 text-[#2E1065] shadow-sm cursor-pointer"
+            : "p-3 sm:p-4 rounded-xl sm:rounded-2xl border-2 text-left transition-all flex items-center justify-between gap-2.5 sm:gap-3 bg-[#FAFAFA] border-slate-200 text-slate-400 opacity-60 cursor-pointer";
+
+          var checkClass = isChecked
+            ? "w-5 h-5 rounded-lg flex items-center justify-center shrink-0 text-xs font-bold bg-[#7C3AED] text-white"
+            : "w-5 h-5 rounded-lg flex items-center justify-center shrink-0 text-xs font-bold border-2 border-slate-300 bg-white";
+
+          var checkSvg = isChecked
+            ? '<svg class="w-3.5 h-3.5 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>'
+            : '';
+
+          html += '<button type="button" onclick="ggoToggleCalc(' + idx + ')" class="' + btnClass + '">'
+                + '<div class="flex items-center gap-2 sm:gap-2.5 min-w-0 flex-1">'
+                + '<div class="' + checkClass + '">' + checkSvg + '</div>'
+                + '<span class="text-xs sm:text-sm font-semibold leading-snug break-words">' + item.name + '</span>'
+                + '</div>'
+                + '<span class="text-xs font-extrabold text-[#7C3AED] shrink-0 tabular-nums bg-purple-100/80 px-2 py-0.5 rounded-lg">R$ ' + item.price + '</span>'
+                + '</button>';
+        });
+
+        grid.innerHTML = html;
+        totalEl.textContent = "R$ " + total.toLocaleString("pt-BR") + ",00";
+      }
+
+      window.ggoToggleCalc = function(index) {
+        if (wasteItems[index]) {
+          wasteItems[index].checked = !wasteItems[index].checked;
+          renderCalculator();
+        }
+      };
+
+      // 3. Checklist Interativo por Trimestre
+      var checklistData = [
+        {
+          trimestre: "1º Trimestre (Semanas 1 a 13)",
+          foco: "Cuidado com o corpo, exames iniciais e acolhimento da notícia",
+          tasks: [
+            { id: "t1", text: "Primeira consulta pré-natal e agendamento dos exames de sangue", done: true },
+            { id: "t2", text: "Iniciar suplementação com ácido fólico e vitaminas prescritas", done: true },
+            { id: "t3", text: "Ultrassom morfológico de primeiro trimestre (translucência nucal)", done: false },
+            { id: "t4", text: "Começar pasta física ou digital para laudos e carteirinha da gestante", done: false }
+          ]
+        },
+        {
+          trimestre: "2º Trimestre (Semanas 14 a 27)",
+          foco: "Disposição em alta, planejamento do quarto e enxoval inteligente",
+          tasks: [
+            { id: "t5", text: "Ultrassom morfológico do 2º trimestre (verificação detalhada)", done: false },
+            { id: "t6", text: "Definir estilo do quarto e lista de itens essenciais", done: false },
+            { id: "t7", text: "Comprar primeiras roupinhas nos tamanhos RN e P (sem exageros)", done: false },
+            { id: "t8", text: "Preencher prompt da IA para o Enxoval Personalizado", done: false }
+          ]
+        },
+        {
+          trimestre: "3º Trimestre (Semanas 28 a 40+)",
+          foco: "Reta final, malas prontas, lavagem das roupinhas e tranquilidade",
+          tasks: [
+            { id: "t9", text: "Lavar e passar todas as roupinhas e tecidos com sabão neutro", done: false },
+            { id: "t10", text: "Montar a mala da maternidade da mamãe, bebê e acompanhante", done: false },
+            { id: "t11", text: "Instalar bebê-conforto no carro e testar a fixação", done: false },
+            { id: "t12", text: "Separar documentos: RG, CPF, carteirinha do convênio e cartão pré-natal", done: false }
+          ]
+        }
+      ];
+
+      var activeTrimester = 0;
+
+      window.ggoSetTrimester = function(index) {
+        activeTrimester = index;
+        for (var i = 0; i < 3; i++) {
+          var tabBtn = document.getElementById("ggo-tab-" + i);
+          if (tabBtn) {
+            if (i === index) {
+              tabBtn.className = "px-3 py-1.5 sm:px-3.5 rounded-lg sm:rounded-xl transition-all bg-white text-[#7C3AED] shadow-sm font-extrabold";
+            } else {
+              tabBtn.className = "px-3 py-1.5 sm:px-3.5 rounded-lg sm:rounded-xl transition-all text-[#6D28D9]/70 hover:text-[#4C1D95]";
+            }
+          }
+        }
+        renderChecklistTasks();
+      };
+
+      window.ggoToggleTask = function(taskIdx) {
+        var current = checklistData[activeTrimester];
+        if (current && current.tasks[taskIdx]) {
+          current.tasks[taskIdx].done = !current.tasks[taskIdx].done;
+          renderChecklistTasks();
+        }
+      };
+
+      function renderChecklistTasks() {
+        var current = checklistData[activeTrimester];
+        var tasksContainer = document.getElementById("ggo-checklist-tasks");
+        var triTitle = document.getElementById("ggo-tri-title");
+        var triFocus = document.getElementById("ggo-tri-focus");
+        var progressText = document.getElementById("ggo-tri-progress-text");
+        var progressBar = document.getElementById("ggo-tri-progress-bar");
+
+        if (!current || !tasksContainer) return;
+
+        if (triTitle) triTitle.textContent = current.trimestre;
+        if (triFocus) triFocus.textContent = current.foco;
+
+        var total = current.tasks.length;
+        var completed = current.tasks.filter(function(t) { return t.done; }).length;
+        var pct = Math.round((completed / total) * 100);
+
+        if (progressText) progressText.textContent = completed + "/" + total + " concluídos (" + pct + "%)";
+        if (progressBar) progressBar.style.width = pct + "%";
+
+        var html = "";
+        current.tasks.forEach(function(task, idx) {
+          var isDone = task.done;
+          var itemClass = isDone
+            ? "w-full text-left p-3.5 sm:p-4 rounded-2xl border transition-all flex items-start gap-3.5 bg-[#F3FAF5] border-emerald-200 text-emerald-900 cursor-pointer"
+            : "w-full text-left p-3.5 sm:p-4 rounded-2xl border transition-all flex items-start gap-3.5 bg-white border-purple-100 text-[#2E1065] hover:border-purple-300 shadow-sm cursor-pointer";
+
+          var boxClass = isDone
+            ? "w-6 h-6 rounded-xl flex items-center justify-center shrink-0 mt-0.5 transition-colors bg-emerald-600 text-white"
+            : "w-6 h-6 rounded-xl flex items-center justify-center shrink-0 mt-0.5 transition-colors border-2 border-purple-300 bg-white";
+
+          var checkSvg = isDone
+            ? '<svg class="w-4 h-4 stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>'
+            : '';
+
+          var textClass = isDone
+            ? "text-xs sm:text-sm font-semibold line-through text-emerald-700/60"
+            : "text-xs sm:text-sm font-semibold text-[#2E1065]";
+
+          var badge = isDone
+            ? '<span class="text-xs font-extrabold text-emerald-600 shrink-0">Concluído! 💜</span>'
+            : '';
+
+          html += '<button type="button" onclick="ggoToggleTask(' + idx + ')" class="' + itemClass + '">'
+                + '<div class="' + boxClass + '">' + checkSvg + '</div>'
+                + '<div class="flex-1"><span class="' + textClass + '">' + task.text + '</span></div>'
+                + badge
+                + '</button>';
+        });
+
+        tasksContainer.innerHTML = html;
+      }
+
+      // 4. FAQ Accordion Toggle
+      window.ggoToggleFaq = function(index) {
+        for (var i = 0; i < 6; i++) {
+          var ans = document.getElementById("ggo-faq-ans-" + i);
+          var icon = document.getElementById("ggo-faq-icon-" + i);
+          if (ans && icon) {
+            if (i === index) {
+              var isHidden = ans.classList.contains("hidden");
+              if (isHidden) {
+                ans.classList.remove("hidden");
+                icon.classList.add("rotate-180", "bg-[#7C3AED]", "text-white");
+                icon.classList.remove("bg-purple-100", "text-[#7C3AED]");
+              } else {
+                ans.classList.add("hidden");
+                icon.classList.remove("rotate-180", "bg-[#7C3AED]", "text-white");
+                icon.classList.add("bg-purple-100", "text-[#7C3AED]");
+              }
+            } else {
+              ans.classList.add("hidden");
+              icon.classList.remove("rotate-180", "bg-[#7C3AED]", "text-white");
+              icon.classList.add("bg-purple-100", "text-[#7C3AED]");
+            }
+          }
+        }
+      };
+
+      // 5. Barra Fixa Mobile no Scroll
+      function initMobileSticky() {
+        var sticky = document.getElementById("ggo-mobile-sticky-cta");
+        if (!sticky) return;
+        window.addEventListener("scroll", function() {
+          if (window.scrollY > 350) {
+            sticky.classList.remove("hidden");
+          } else {
+            sticky.classList.add("hidden");
+          }
+        }, { passive: true });
+      }
+
+      // Inicialização após o DOM carregar
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", function() {
+          initCountdown();
+          renderCalculator();
+          renderChecklistTasks();
+          initMobileSticky();
+        });
+      } else {
+        initCountdown();
+        renderCalculator();
+        renderChecklistTasks();
+        initMobileSticky();
+      }
+    })();
+  </script>
+</div>
